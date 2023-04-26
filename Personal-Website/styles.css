@@ -1,0 +1,25 @@
+
+body{
+    padding: 0px;
+}
+
+.opening{
+    text-align: center;
+}
+
+.top-container{
+    background-color:#DAF5FF;
+    height: 100%;
+    padding: 100px;
+
+}
+
+.middle-container{
+    background-color:#FFF3E2;
+}
+
+#turtle{
+    height:200px;
+    width:200px;
+}
+
