@@ -3,23 +3,36 @@ body{
     padding: 0px;
 }
 
-.opening{
+.opening-name{
     text-align: center;
+    color:#009FBD;
+    font-size: 55px;
+    font-family: "Caveat", "cursive";
 }
+.opening-programmer{
+    text-align: center;
+    color:#009FBD;
+    font-size: 30px;
+    font-family: "Caveat", "cursive";
+}
+
 
 .top-container{
     background-color:#DAF5FF;
     height: 100%;
     padding: 100px;
+    border: 0px;
+    
 
 }
+
 
 .middle-container{
     background-color:#FFF3E2;
 }
 
-#turtle{
-    height:200px;
-    width:200px;
-}
 
+.divider{
+    border: 10px dotted gray;
+    height: 0;
+}
