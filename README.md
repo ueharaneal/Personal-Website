@@ -4,7 +4,7 @@
 # Portfolio/Experience/Projects/Skills
 
 
-#Technologies used
--HTMl
--CSS
--Javascript
+# Technologies used
+  -HTMl
+  -CSS
+  -Javascript
