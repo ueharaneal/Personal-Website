@@ -7,14 +7,14 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Hero = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const buttonClassname =
-    "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black rounded-md w-[200px] font-medium mx-auto py-2 my-8 md:text-xl hover:-translate-y-1 hover:scale-110 transition-transform duration-200 hover:text-[#E1D9D1]";
+    "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-110 transition-transform duration-200 hover:text-[#E1D9D1]";
   return (
     <section id="home" className="text-[#EBE4D1]">
       <div className="flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px] mt-[96px] p-3 ">
         <p className="text-[#7B68EE] md:text-lg font-bold p-2">
           Your search for the right Software Developer ends here.
         </p>
-        <h1 className="font-bold text-4xl sm:text-6xl md:text-7xl p-3 md:py-6">
+        <h1 className="font-bold text-center text-4xl sm:text-6xl md:text-7xl p-3 md:py-6">
           Neal Uehara
         </h1>
 
@@ -33,11 +33,12 @@ const Hero = ({ setSelectedPage }) => {
           Full-stack developer dedicated to problem solving, thriving in dynamic
           learning.
         </p>
-        <div className= "flex justify-center">
-            <button className={buttonClassname}>My Resume</button>
-            <button className={buttonClassname}>See Code</button>
+        <div className="flex justify-center">
+          <button className={`${buttonClassname} mr-2`}>My Resume</button>
+          <button className={`${buttonClassname} ml-2`}>
+            See Website Code
+          </button>
         </div>
-
       </div>
     </section>
   );

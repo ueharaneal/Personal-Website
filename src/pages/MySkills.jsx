@@ -1,4 +1,4 @@
-import LineGradient from "./LineGradient";
+import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
@@ -26,7 +26,7 @@ const MySkills = () => {
           <p className="mt-10 mb-7">
             Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
             fames odio in at.
-          </p> 
+          </p>
         </motion.div>
 
         <div className="mt-16 md:mt-0 t">
@@ -55,7 +55,7 @@ const MySkills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -83,7 +83,7 @@ const MySkills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
