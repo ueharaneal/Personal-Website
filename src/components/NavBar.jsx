@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FaHome } from "react-icons/fa";
 
 
-const Link =({page, selectedPage, setSelectedPage})=>{
+
+const Link =({children, page, selectedPage, setSelectedPage})=>{
   const lowerCasePage = page.toLowerCase();
   return(
     <AnchorLink
@@ -12,7 +14,10 @@ const Link =({page, selectedPage, setSelectedPage})=>{
       href={`#${lowerCasePage}`}
       onClick={()=>setSelectedPage(lowerCasePage)}
   >
-    {page}
+    <div>
+      {children}
+      {page}
+    </div>
   </AnchorLink>
   )
 }
