@@ -13,9 +13,23 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) setIsTopOfPage(true);
-      if (window.scrollY !== 0) setIsTopOfPage(false);
+      // Get the position of each section
+      const homePos = document.getElementById("home")?.offsetTop || 0;
+      const skillsPos = document.getElementById("skills")?.offsetTop || 0;
+      // ... other sections
+  
+      const currentScrollPos = window.scrollY + window.innerHeight / 2; // Center of the screen
+  
+      // Determine which section is currently in view
+      if (currentScrollPos >= homePos && currentScrollPos < skillsPos) {
+        setSelectedPage("home");
+      } else if (currentScrollPos >= skillsPos) {
+        // ... condition for "skills" and other sections
+        setSelectedPage("skills");
+      }
+      // ... other conditions
     };
+  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

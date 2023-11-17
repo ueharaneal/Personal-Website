@@ -7,7 +7,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Hero = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const buttonClassname =
-    "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-110 transition-transform duration-200 hover:text-[#E1D9D1]";
+    "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-[#E1D9D1]";
   return (
     <section id="home" className="text-[#EBE4D1]">
       <div className="flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px] mt-[96px] p-3">

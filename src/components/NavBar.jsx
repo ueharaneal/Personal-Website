@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
+
 const Link =({page, selectedPage, setSelectedPage})=>{
   const lowerCasePage = page.toLowerCase();
   return(
@@ -48,6 +49,7 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
            selectedPage = {selectedPage}
            setSelectedPage ={setSelectedPage}/>
         </ul>
+        {/* Mobile NavBar */}
         <div onClick={handleNav} className="block md:hidden ">
           {!nav ?<div className="rounded-full bg-gradient-to-r from-purple-400 to-[#7B68EE] items-center p-3"><AiOutlineMenu/></div>:<div className="rounded-full bg-gradient-to-r from-purple-400 to-[#7B68EE] items-center p-3"><AiOutlineClose/></div>}
         </div>
@@ -82,7 +84,7 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
           </ul>
         </div>
       </div>
-      {/* Mobile NavBar */}
+      
       
       
     </nav>
