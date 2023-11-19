@@ -5,39 +5,12 @@ import Motion from "framer-motion";
 import Hexagon from "../assets/Hexagon"
 
 
-const Home = ({ onEnter, onLeave }) => {
+const Home = ({ onEnter,}) => {
   const ref = useRef();
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const buttonClassname =
     "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-[#E1D9D1]";
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            onEnter();
-          } else {
-            onLeave();
-          }
-        },
-        {
-          root: null, // viewport is the bounding box
-          rootMargin: '0px', // No margin
-          threshold: 0.1 // Triggered when 10% is visible
-        }
-      );
-  
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-  
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      };
-    }, [ref, onEnter, onLeave]);
-    
   return (
     <section id="home"  ref={ref} className="text-[#EBE4D1] ">
       {/* Bg container */}

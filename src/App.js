@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
-import Hero from "./pages/Hero";
-import MySkills from "./pages/MySkills";
-import DotGroup from "./components/DotGroup";
 import useMediaQuery from "./hooks/useMediaQuery";
-import LineGradient from "./components/LineGradient";
-import Hexagon from "./assets/Hexagon";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import MySkills from "./pages/MySkills";
+import Projects from "./pages/Projects";
+import ContactMe from "./pages/ContactMe";
+
+import DotGroup from "./components/DotGroup";
 
 
 function App() {
@@ -17,19 +20,29 @@ function App() {
     const handleScroll = () => {
       // Get the position of each section
       const homePos = document.getElementById("home")?.offsetTop || 0;
+      const aboutPos = document.getElementById("about")?.offsetTop || 0;
       const skillsPos = document.getElementById("skills")?.offsetTop || 0;
-      // ... other sections
-
+      const projectsPos = document.getElementById("projects")?.offsetTop || 0;
+      const contactPos = document.getElementById("contactme")?.offsetTop || 0;
+      
       const currentScrollPos = window.scrollY + window.innerHeight / 2; // Center of the screen
 
       // Determine which section is currently in view
-      if (currentScrollPos >= homePos && currentScrollPos < skillsPos) {
+      if (currentScrollPos >= homePos && currentScrollPos < aboutPos) {
         setSelectedPage("home");
-      } else if (currentScrollPos >= skillsPos) {
-        // ... condition for "skills" and other sections
-        setSelectedPage("skills");
+
+      } else if (currentScrollPos >= aboutPos && currentScrollPos < skillsPos) {
+        setSelectedPage("about");
+
+      } else if (currentScrollPos >= skillsPos && currentScrollPos < projectsPos){
+        setSelectedPage("skills")
+
+      } else if (currentScrollPos >= projectsPos && currentScrollPos < contactPos ){
+        setSelectedPage("projects")
+
+      } else if ( currentScrollPos >= contactPos){
+        setSelectedPage("contactme")
       }
-      // ... other conditions
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,12 +50,7 @@ function App() {
   }, []);
   return (
     <div className="relative"> {/* This container will define the bounds for the Hexagon */}
-      <div className="absolute inset-0 top-0 z-0">
-        <Hexagon className="w-[%100] h-[%100]" />
-      </div>
-  
-      {/* NavBar and DotGroup should be inside this relative container to be on top of Hexagon */}
-      <div className="relative z-10"> 
+      
         <NavBar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
@@ -50,10 +58,8 @@ function App() {
           className='fixed'
         />
   
-        
-  
-        {/* Hero and other content */}
-        <div className="w-5/6 mx-auto md:h-full">
+        {/* Home and other content */}
+        <div className="mx-auto md:h-full">
           {isAboveMediumScreens && (
             <DotGroup
               selectedPage={selectedPage}
@@ -61,11 +67,17 @@ function App() {
               className=""
             />
           )}
-          <Hero setSelectedPage={setSelectedPage} />
-          <LineGradient />
-          <MySkills />
+          <div className="">
+            <Home setSelectedPage={setSelectedPage} />
+            <About/>
+            <MySkills setSelectedPage={setSelectedPage}/>
+            <Projects/>
+            <ContactMe/>
+
+          </div>
+          
+
         </div>
-      </div>
     </div>
   );
 }

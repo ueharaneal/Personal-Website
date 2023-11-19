@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 
 
 const Link =({children, page, selectedPage, setSelectedPage})=>{
-  const lowerCasePage = page.toLowerCase();
+  const lowerCasePage = page.toLowerCase().replace(/\s+/g, '');
   return(
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-yellow-400" : ""}
@@ -38,15 +38,15 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
             selectedPage = {selectedPage}
             setSelectedPage ={setSelectedPage}/>
             <Link
+            page="About"
+            selectedPage = {selectedPage}
+            setSelectedPage ={setSelectedPage}/>
+            <Link
             page="Skills"
             selectedPage = {selectedPage}
             setSelectedPage ={setSelectedPage}/>
             <Link
             page="Projects"
-            selectedPage = {selectedPage}
-            setSelectedPage ={setSelectedPage}/>
-            <Link
-            page="Resume"
             selectedPage = {selectedPage}
             setSelectedPage ={setSelectedPage}/>
             <Link
@@ -67,17 +67,17 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
                 setSelectedPage ={setSelectedPage}
                 className="p-4 border-b border-gray-600"/>
               <Link
+                page="About"
+                selectedPage = {selectedPage}
+                setSelectedPage ={setSelectedPage}
+                className="p-4 border-b border-gray-600"/>
+              <Link
                 page="Skills"
                 selectedPage = {selectedPage}
                 setSelectedPage ={setSelectedPage}
                 className="p-4 border-b border-gray-600"/>
               <Link
                 page="Projects"
-                selectedPage = {selectedPage}
-                setSelectedPage ={setSelectedPage}
-                className="p-4 border-b border-gray-600"/>
-              <Link
-                page="Resume"
                 selectedPage = {selectedPage}
                 setSelectedPage ={setSelectedPage}
                 className="p-4 border-b border-gray-600"/>
