@@ -11,6 +11,8 @@ import ContactMe from "./pages/ContactMe";
 import DotGroup from "./components/DotGroup";
 
 
+
+
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -50,7 +52,6 @@ function App() {
   }, []);
   return (
     <div className="relative">
-      
         <NavBar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
