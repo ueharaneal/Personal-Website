@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "./components/NavBar";
 import useMediaQuery from "./hooks/useMediaQuery";
 
 import Home from "./pages/Home";
@@ -9,9 +8,7 @@ import Projects from "./pages/Projects";
 import ContactMe from "./pages/ContactMe";
 
 import DotGroup from "./components/DotGroup";
-
-
-
+import NavBar from "./components/NavBar";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -26,24 +23,26 @@ function App() {
       const skillsPos = document.getElementById("skills")?.offsetTop || 0;
       const projectsPos = document.getElementById("projects")?.offsetTop || 0;
       const contactPos = document.getElementById("contactme")?.offsetTop || 0;
-      
+
       const currentScrollPos = window.scrollY + window.innerHeight / 2; // Center of the screen
 
       // Determine which section is currently in view
       if (currentScrollPos >= homePos && currentScrollPos < aboutPos) {
         setSelectedPage("home");
-
       } else if (currentScrollPos >= aboutPos && currentScrollPos < skillsPos) {
         setSelectedPage("about");
-
-      } else if (currentScrollPos >= skillsPos && currentScrollPos < projectsPos){
-        setSelectedPage("skills")
-
-      } else if (currentScrollPos >= projectsPos && currentScrollPos < contactPos ){
-        setSelectedPage("projects")
-
-      } else if ( currentScrollPos >= contactPos){
-        setSelectedPage("contactme")
+      } else if (
+        currentScrollPos >= skillsPos &&
+        currentScrollPos < projectsPos
+      ) {
+        setSelectedPage("skills");
+      } else if (
+        currentScrollPos >= projectsPos &&
+        currentScrollPos < contactPos
+      ) {
+        setSelectedPage("projects");
+      } else if (currentScrollPos >= contactPos) {
+        setSelectedPage("contactme");
       }
     };
 
@@ -52,34 +51,28 @@ function App() {
   }, []);
   return (
     <div className="relative">
-        <NavBar
-          isTopOfPage={isTopOfPage}
+      <NavBar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+        className="fixed"
+      />
+      {isAboveMediumScreens && (
+        <DotGroup
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
-          className='fixed'
+          className="fixed z-40 right-0 top-1/2"
         />
-         {isAboveMediumScreens && (
-            <DotGroup
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-              className="fixed z-40 right-0 top-1/2"
-            />
-          )}
-  
-        {/* Home and other content */}
-        <div className="mx-auto md:h-full relative">
-         
-          <div className="">
-            <Home className="z-10"/>
-            <About className="z-10"/>
-            <MySkills className="z-10"/>
-            <Projects className="z-10"/>
-            <ContactMe className="z-10"/>
+      )}
 
-          </div>
-          
-
-        </div>
+      {/*Pages */}
+      <div className="mx-auto md:h-full relative">
+          <Home className="z-10"/>
+          <About className="z-10" />
+          <MySkills className="z-10" />
+          <Projects className="z-10" />
+          <ContactMe className="z-10" />
+      </div>
     </div>
   );
 }
