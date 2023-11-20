@@ -70,11 +70,11 @@ function App() {
         <div className="mx-auto md:h-full relative">
          
           <div className="">
-            <Home setSelectedPage={setSelectedPage} className="z-10"/>
-            <About/>
-            <MySkills setSelectedPage={setSelectedPage}/>
-            <Projects/>
-            <ContactMe/>
+            <Home className="z-10"/>
+            <About className="z-10"/>
+            <MySkills className="z-10"/>
+            <Projects className="z-10"/>
+            <ContactMe className="z-10"/>
 
           </div>
           

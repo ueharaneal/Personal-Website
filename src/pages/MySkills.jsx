@@ -2,15 +2,16 @@
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import SkillsMotion from "../components/SkillsMotion";
+import Tech from '../components/Tech'
 
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="w-5/6 mx-auto pt-10 pb-24 text-[#EBE4D1]">
+    <section id="skills" className="w-5/6 mx-auto pt-10 pb-24 text-[#EBE4D1] h-screen relative">
       <div className="">
           {/* HEADER AND IMAGE SECTION */}
-        <div className="md:flex md:justify-between md:gap-16 mt-32">
+        <div className="md:flex md:justify-between md:gap-16 mt-28">
           <motion.div
             className="md:w-1/3"
             initial="hidden"
@@ -22,7 +23,7 @@ const MySkills = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="font-semibold text-4xl mb-5">
+            <p className="font-semibold text-4xl mt-5 mb-5">
               Technical <span className="text-[#7B68EE]">SKILLS</span>
             </p>
             <p className="mt-10 mb-7">
@@ -31,21 +32,8 @@ const MySkills = () => {
             </p>
           </motion.div>
 
-          <div className="mt-16 md:mt-0 t">
-            {isAboveLarge ? (
-              <div
-                className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-                before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
-              >
-                <img
-                  alt="skills"
-                  className="z-10"
-                  src="assets/skills-image.png"
-                />
-              </div>
-            ) : (
-              <img alt="skills" className="z-10" src="assets/skills-image.png" />
-            )}
+          <div className="md:flex md:flex-col md:justify-start md:w-2/3">
+            <Tech />
           </div>
         </div>
 
@@ -53,7 +41,7 @@ const MySkills = () => {
       
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between mt-16 gap-32 ">
         {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"
@@ -66,9 +54,11 @@ const MySkills = () => {
             visible: { opacity: 1, y: 0 },
           }}
         />
+        
         <SkillsMotion number="01" title="Smart">
           This is the description
         </SkillsMotion>
+      
 
         {/* INNOVATIVE */}
         <SkillsMotion number="02" title="Innovative">

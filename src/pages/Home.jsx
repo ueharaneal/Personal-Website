@@ -9,7 +9,7 @@ const Home = ({ onEnter }) => {
   const ref = useRef();
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const buttonClassname =
-    "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-[#E1D9D1]";
+    "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-gray-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-[#6754DA]";
 
   return (
     <section id="home" ref={ref} className="text-[#EBE4D1] relative z-0">
