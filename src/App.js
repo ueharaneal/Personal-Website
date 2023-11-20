@@ -49,7 +49,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="relative"> {/* This container will define the bounds for the Hexagon */}
+    <div className="relative">
       
         <NavBar
           isTopOfPage={isTopOfPage}
@@ -57,18 +57,19 @@ function App() {
           setSelectedPage={setSelectedPage}
           className='fixed'
         />
-  
-        {/* Home and other content */}
-        <div className="mx-auto md:h-full">
-          {isAboveMediumScreens && (
+         {isAboveMediumScreens && (
             <DotGroup
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-              className=""
+              className="fixed z-40 right-0 top-1/2"
             />
           )}
+  
+        {/* Home and other content */}
+        <div className="mx-auto md:h-full relative">
+         
           <div className="">
-            <Home setSelectedPage={setSelectedPage} />
+            <Home setSelectedPage={setSelectedPage} className="z-10"/>
             <About/>
             <MySkills setSelectedPage={setSelectedPage}/>
             <Projects/>

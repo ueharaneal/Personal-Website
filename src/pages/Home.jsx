@@ -3,6 +3,7 @@ import Typed from "react-typed";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Motion from "framer-motion";
 import Hexagon from "../assets/Hexagon"
+import background from "../assets/Network.webm"
 
 
 const Home = ({ onEnter,}) => {
@@ -12,10 +13,15 @@ const Home = ({ onEnter,}) => {
     "bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md w-[200px] font-medium mx-auto py-2 my-8 w-[120px] md:w-[200px] md:text-xl hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-[#E1D9D1]";
 
   return (
-    <section id="home"  ref={ref} className="text-[#EBE4D1] ">
+    <section id="home"  ref={ref} className="text-[#EBE4D1] relative z-0">
       {/* Bg container */}
+      <div className="absolute inset-0 z-0">
+        <video autoPlay muted loop className="w-full h-full object-cover">
+          <source src={background} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="">
-      <Hexagon className="absolute inset-0 z-0 w-full" />
         <div className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
             Your search for the right Software Developer ends here.

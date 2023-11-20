@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { FaHome } from "react-icons/fa";
+
 
 
 
