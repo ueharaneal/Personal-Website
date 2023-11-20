@@ -20,7 +20,7 @@ function ParticlesBg() {
                             "number": {
                                 "value": 10,
                                 "density": {
-                                    "enable": false,
+                                    "enable": true,
                                     "value_area": 800
                                 }
                             },
@@ -66,13 +66,13 @@ function ParticlesBg() {
                             "line_linked": {
                                 "enable": true,
                                 "distance": 600,
-                                "color": "#7B68EE",
+                                "color": "#6754DA",
                                 "opacity": 0.4,
                                 "width": 2
                             },
                             "move": {
                                 "enable": true,
-                                "speed": 2,
+                                "speed": .8,
                                 "direction": "none",
                                 "random": false,
                                 "straight": false,
@@ -91,8 +91,8 @@ function ParticlesBg() {
                                     "mode": ["grab"]
                                 },
                                 "onclick": {
-                                    "enable": false,
-                                    "mode": "bubble"
+                                    "enable": true,
+                                    "mode": "push"
                                 },
                                 "resize": true
                             },
@@ -114,7 +114,7 @@ function ParticlesBg() {
                                     "distance": 200
                                 },
                                 "push": {
-                                    "particles_nb": 4
+                                    "particles_nb": 3
                                 },
                                 "remove": {
                                     "particles_nb": 2
@@ -126,7 +126,7 @@ function ParticlesBg() {
                             "color": "#111",
                             "image": "",
                             "position": "50% 50%",
-                            "repeat": "no-repeat",
+                            "repeat": "repeat",
                             "size": "cover"
                         }
                     }}
