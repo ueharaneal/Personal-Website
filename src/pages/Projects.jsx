@@ -6,7 +6,7 @@ function Projects({ onEnter }) {
   const ref = useRef(null);
 
   return (
-    <section ref={ref} id="projects" className="relative mx-auto w-screen h-screen">
+    <section ref={ref} id="projects" className="relative mx-auto w-5/6  h-screen">
       <div className=" text-white">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae quia porro sunt dolores aut hic ut labore, placeat maxime, alias et non enim aspernatur quis facere harum magnam sed.
         Vero ducimus sequi unde tempore beatae soluta expedita tenetur facere illum in sint libero, eius numquam dolorem maiores earum cumque repellat voluptate ullam nam corporis adipisci delectus amet? Ut, deleniti.
