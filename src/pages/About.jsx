@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 
-function About({ onEnter, }) {
+function About() {
   const ref = useRef(null);
 
   return (

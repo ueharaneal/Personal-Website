@@ -9,7 +9,6 @@ import nodejs from "../assets/tech/nodejs.png";
 import reactjs from "../assets/tech/reactjs.png";
 import redux from "../assets/tech/redux.png";
 import tailwind from "../assets/tech/tailwind.png";
-import typescript from "../assets/tech/typescript.png";
 import python from '../assets/tech/python.png';
 import mysql from '../assets/tech/mysql.png'
 
