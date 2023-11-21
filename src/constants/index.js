@@ -1,4 +1,4 @@
-
+import aws from '../assets/tech/aws.png'
 import css from "../assets/tech/css.png";
 import docker from "../assets/tech/docker.png";
 import git from "../assets/tech/git.png";
@@ -10,6 +10,8 @@ import reactjs from "../assets/tech/reactjs.png";
 import redux from "../assets/tech/redux.png";
 import tailwind from "../assets/tech/tailwind.png";
 import typescript from "../assets/tech/typescript.png";
+import python from '../assets/tech/python.png';
+import mysql from '../assets/tech/mysql.png'
 
 
 
@@ -27,10 +29,6 @@ const technologies = [
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
       name: "React JS",
       icon: reactjs,
     },
@@ -39,20 +37,32 @@ const technologies = [
       icon: redux,
     },
     {
-      name: "Tailwind CSS",
-      icon: tailwind,
+      name: "Python",
+      icon: python,
     },
     {
       name: "Node JS",
       icon: nodejs,
     },
     {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
+    {
       name: "MongoDB",
       icon: mongodb,
     },
     {
+      name: "MySQL",
+      icon: mysql,
+    },
+    {
       name: "git",
       icon: git,
+    },
+    {
+      name: "AWS",
+      icon: aws,
     },
     {
       name: "docker",

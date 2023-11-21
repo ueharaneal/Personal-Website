@@ -12,7 +12,10 @@ const Link =({children, page, selectedPage, setSelectedPage})=>{
       className={`${selectedPage === lowerCasePage ? "text-yellow-400" : ""}
       hover:text-yellow-400 transition duration-500`}
       href={`#${lowerCasePage}`}
-      onClick={()=>setSelectedPage(lowerCasePage)}
+      onClick={()=>{
+        setSelectedPage(lowerCasePage)
+        window.history.pushState({}, '', `#${lowerCasePage}`)
+      }}
   >
     <div>
       {children}

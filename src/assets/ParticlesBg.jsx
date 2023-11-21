@@ -68,7 +68,7 @@ function ParticlesBg() {
                                 "distance": 600,
                                 "color": "#6754DA",
                                 "opacity": 0.4,
-                                "width": 2
+                                "width": 4
                             },
                             "move": {
                                 "enable": true,
