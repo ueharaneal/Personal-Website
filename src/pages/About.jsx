@@ -12,7 +12,7 @@ function About() {
         animate={{ x: [0,100,0]}}
         transition={{ ease:'easeOut', duration: 2}}
         className="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae quia porro sunt dolores aut hic ut labore, placeat maxime, alias et non enim aspernatur quis facere harum magnam sed.
+        If this changes in master IDKKK K K KEKKDN:OESIDFJ:OESIJF      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae quia porro sunt dolores aut hic ut labore, placeat maxime, alias et non enim aspernatur quis facere harum magnam sed.
         Vero ducimus sequi unde tempore beatae soluta expedita tenetur facere illum in sint libero, eius numquam dolorem maiores earum cumque repellat voluptate ullam nam corporis adipisci delectus amet? Ut, deleniti.
         Corporis vero, nostrum dolore pariatur unde ipsam consequuntur amet ex harum necessitatibus consectetur blanditiis eius esse atque. Error at enim accusantium inventore explicabo laborum itaque eius, pariatur dolore magnam velit.
         Commodi placeat aliquid ea consectetur ratione non est accusantium. Nostrum, deleniti atque, iusto eveniet consequuntur veniam eligendi repellat recusandae fugit ad quisquam beatae illum nisi. Error quas in odit distinctio.
