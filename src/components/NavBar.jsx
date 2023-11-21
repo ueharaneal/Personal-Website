@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { motion, useScroll, useMotionValueEvent} from "framer-motion"
 
 
 
@@ -25,15 +26,36 @@ const Link =({children, page, selectedPage, setSelectedPage})=>{
   )
 }
 const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
-
+  const { scrollY } = useScroll();
+  const [hidden,setHidden] = useState(false);
   const navBarBackground = isTopOfPage ? "" : "bg-red";
   const[nav, setNav] = useState(false)
+
+  //hide navBar when scrolling
+  useMotionValueEvent(scrollY, "change", (latest)=>{ 
+    const previous = scrollY.getPrevious();
+    if(previous < latest && latest > 150){
+      setHidden(true)}
+    else{
+      setHidden(false)
+    }
+  });
+
   const handleNav =()=>{
     setNav(!nav)
   }
+
+
   return(
-    <div className="md:w-10 w-full">
-      <nav className={`${navBarBackground} w-full text-[#EBE4D1] z-40 fixed top-8`}>
+    
+      <motion.nav 
+      variants={{
+        visible:{ y:0 }, 
+        hidden:{ y:"-140%"},
+      }}
+      animate={hidden? "hidden" : "visible"}
+      transition={{duration:0.4, ease:"easeInOut"}}
+      className={`${navBarBackground} w-full text-[#EBE4D1] z-40 fixed top-6`}>
         <div className= "flex justify-center px-4">
           <ul className="hidden  md:flex flex-row  mt-3 p-4 gap-10 uppercase rounded-full bg-[#7B68EE] bg-opacity-30 backdrop-blur-md border-b border-gray-800">
             <Link
@@ -92,8 +114,7 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
             </ul>
           </div>
         </div>
-      </nav>
-    </div>
+      </motion.nav>
   )
 };
 
