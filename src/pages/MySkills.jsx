@@ -8,7 +8,7 @@ import Tech from '../components/Tech'
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="w-5/6 mx-auto pt-10 pb-24 text-[#EBE4D1] h-screen relative">
+    <section id="skills" className="w-4/6 mx-auto pt-10 pb-24 text-[#EBE4D1] h-screen relative">
       <div className="">
           {/* HEADER AND IMAGE SECTION */}
         <div className="md:flex md:justify-between md:gap-16 mt-28">
@@ -23,7 +23,7 @@ const MySkills = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="font-semibold text-4xl mt-5 mb-5">
+            <p className="font-semibold font-sans text-4xl mt-5 mb-5">
               Technical <span className="text-[#7B68EE]">SKILLS</span>
             </p>
             <p className="mt-10 mb-7">
