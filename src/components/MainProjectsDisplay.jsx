@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-
+import ShazamifyGif from '../assets/projectVideos/ShazamifyGIF.mov'
 const solutions = [
   {
     id: 1,
-    title: "Individuals",
+    title: "WDIDW-Survey Application",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium in iusto iure aliquam commodi possimus eaque sit recusandae incidunt?",
+      "This website/application empowers business owners and individuals to effortlessly distribute email surveys to their contact lists. All survey responses are securely stored, facilitating easy access and review.",
     imgSrc:
       "https://media2.giphy.com/media/SsTcO55LJDBsI/giphy.gif?cid=ecf05e47hfid50hu34mzkabzoy46hrftyl6g6656uygzmnpy&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    codeLink:
+        "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
+    liveView:
+        "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/"
     
   },
   {
@@ -18,7 +22,7 @@ const solutions = [
     description:
       "Shazamify is a cutting-edge music streaming web application that offers a unique and interactive experience for music lovers. This web app stands out with its third-party backend integration, extensive API library, and visually appealing user interface.",
     imgSrc:
-      "https://media3.giphy.com/media/3oz8xR9wKr8TaazlQc/giphy.gif?cid=ecf05e47izzshtedbk9y9dv6f5yvdsbakp7tth2n58vsdd7p&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+        ShazamifyGif,
     
     codeLink:
         "https://github.com/ueharaneal/Shazamify",
@@ -42,10 +46,7 @@ const MainProjectsDisplay = () => {
     <section className="px-6 text-white">
       <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px]">
         <div>
-          <p className="text-4xl font-semibold mb-8 font-sans">
-            {" "}
-            MY <span className="text-[#7B68EE]">PROJECTS</span>
-          </p>
+          
           <div className="flex flex-col gap-4">
             {solutions.map((q) => {
               return (
@@ -61,19 +62,34 @@ const MainProjectsDisplay = () => {
           </div>
         </div>
         <AnimatePresence mode="wait">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            key={imgSrc}
-            className="rounded-2xl aspect-[4/3] lg:aspect-auto"
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          />
-        </AnimatePresence>
+  {imgSrc === ShazamifyGif ? (
+    <motion.video
+      key={imgSrc}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="rounded-2xl  lg:aspect-auto border-2 border-[#967bc9]"
+      autoPlay
+      loop
+      muted
+    >
+      <source src={ShazamifyGif} type="video/mp4" />
+    </motion.video>
+  ) : (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      key={imgSrc}
+      className="rounded-2xl aspect-[4/3] lg:aspect-auto"
+      style={{
+        backgroundImage: `url(${imgSrc})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    />
+  )}
+</AnimatePresence>
       </div>
     </section>
   );
@@ -144,7 +160,7 @@ const Solution = ({ title, description, codeLink, liveView, index, open, setOpen
         animate={{
           opacity: isOpen ? 1 : 0,
         }}
-        className="absolute inset-0 z-10 bg-gradient-to-r from-[#644bf2] to-transparent"
+        className="absolute inset-0 z-10  border-2 border-[#fac003] rounded-3xl bg-gradient-to-r from-[#644bf2] to-transparent"
       />
       <div className="absolute inset-0 z-0 border-4 border-[#231a5e] bg-[#6A5ACD] rounded-3xl bg-opacity-90" />
     </div>

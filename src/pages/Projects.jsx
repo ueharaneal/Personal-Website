@@ -8,7 +8,11 @@ function Projects({ onEnter }) {
 
   return (
     <section ref={ref} id="projects" className="mx-auto w-5/6 flex justify-center h-screen relative">
-      <div className="flex  justify-center mt-16">
+      <div className="flex flex-col justify-center mt-8">
+        <p className="text-4xl text-white mb-16 ml-10 font-semibold font-sans">
+            {" "}
+            MY <span className="text-[#7B68EE] ml-2">PROJECTS</span>
+          </p>
         <MainProjectsDisplay className=""/>
       </div>
       
