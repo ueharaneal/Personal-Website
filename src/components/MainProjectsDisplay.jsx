@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-import ShazamifyGif from '../assets/projectVideos/ShazamifyGIF.mov'
+import ShazamifyGif from "../assets/projectVideos/ShazamifyGIF.mov";
 const solutions = [
   {
     id: 1,
@@ -11,23 +11,18 @@ const solutions = [
     imgSrc:
       "https://media2.giphy.com/media/SsTcO55LJDBsI/giphy.gif?cid=ecf05e47hfid50hu34mzkabzoy46hrftyl6g6656uygzmnpy&ep=v1_gifs_search&rid=giphy.gif&ct=g",
     codeLink:
-        "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
-    liveView:
-        "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/"
-    
+      "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
+    liveView: "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/",
   },
   {
     id: 2,
     title: "Shazamify",
     description:
       "Shazamify is a cutting-edge music streaming web application that offers a unique and interactive experience for music lovers. This web app stands out with its third-party backend integration, extensive API library, and visually appealing user interface.",
-    imgSrc:
-        ShazamifyGif,
-    
-    codeLink:
-        "https://github.com/ueharaneal/Shazamify",
-    liveView:
-        "https://shazamify.com/"
+    imgSrc: ShazamifyGif,
+
+    codeLink: "https://github.com/ueharaneal/Shazamify",
+    liveView: "https://shazamify.com/",
   },
   {
     id: 3,
@@ -46,7 +41,6 @@ const MainProjectsDisplay = () => {
     <section className="px-6 text-white">
       <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px]">
         <div>
-          
           <div className="flex flex-col gap-4">
             {solutions.map((q) => {
               return (
@@ -62,40 +56,34 @@ const MainProjectsDisplay = () => {
           </div>
         </div>
         <AnimatePresence mode="wait">
-  {imgSrc === ShazamifyGif ? (
-    <motion.video
-      key={imgSrc}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="rounded-2xl  lg:aspect-auto border-2 border-[#967bc9]"
-      autoPlay
-      loop
-      muted
-    >
-      <source src={ShazamifyGif} type="video/mp4" />
-    </motion.video>
-  ) : (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      key={imgSrc}
-      className="rounded-2xl aspect-[4/3] lg:aspect-auto"
-      style={{
-        backgroundImage: `url(${imgSrc})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    />
-  )}
-</AnimatePresence>
+              <motion.div/>
+              <motion.video
+                key={imgSrc}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="rounded-2xl z-20"
+                autoPlay
+                loop
+                muted
+              >
+                <source src={imgSrc} type="video/mp4" />
+              </motion.video>
+        </AnimatePresence>
       </div>
     </section>
   );
 };
 
-const Solution = ({ title, description, codeLink, liveView, index, open, setOpen }) => {
+const Solution = ({
+  title,
+  description,
+  codeLink,
+  liveView,
+  index,
+  open,
+  setOpen,
+}) => {
   const isOpen = index === open;
 
   return (
@@ -136,7 +124,7 @@ const Solution = ({ title, description, codeLink, liveView, index, open, setOpen
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            onClick={() => window.open(codeLink, '_blank')}
+            onClick={() => window.open(codeLink, "_blank")}
             className="border-2 border-slate-800 ml-4 mr-3 -mb-7 mt-4 px-5 py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-900 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>See Code</span>
@@ -147,7 +135,7 @@ const Solution = ({ title, description, codeLink, liveView, index, open, setOpen
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            onClick={() => window.open(liveView, '_blank')}
+            onClick={() => window.open(liveView, "_blank")}
             className="border-2 border-slate-800 ml-4 -mr-3 -mb-7 mt-4 px-5 py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>Live View</span>

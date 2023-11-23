@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Typed from "react-typed";
 import useMediaQuery from "../hooks/useMediaQuery";
-import Motion from "framer-motion";
+import {motion} from "framer-motion";
 
 import Resume from "../assets/SWE1023.pdf"
 import { FiArrowRight } from "react-icons/fi";
@@ -15,16 +15,22 @@ const Home = ({ onEnter }) => {
     "flex flex-row justify-between bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md font-medium mx-auto py-2 px-6 my-8 w-[120px] md:w-[200px] md:text-lg hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-gray-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-[#6754DA] group";
 
   return (
-    <section id="home" ref={ref} className="text-[#EBE4D1] relative z-0">
+    <section id="home"  className="text-[#EBE4D1] relative z-0">
       {/* Bg container */}
-      <div className="">
-        <div className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
+     
+        <motion.div
+         initial={{opacity:0}}
+         whileInView={{opacity:1}}
+         transition={{duration:2}}
+          className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
             Your search for the right Software Developer ends here.
           </p>
-          <h1 className="font-bold text-center text-4xl sm:text-6xl md:text-7xl p-3 md:py-6">
+          <motion.button 
+          whileHover={{scale:1.10, rotate:"2.5deg"}}
+          className="font-bold text-center text-4xl sm:text-6xl md:text-7xl p-3 md:py-6">
             Neal Uehara
-          </h1>
+          </motion.button>
 
           <div className="flex flex-row text-center justify-center pt-3 md:pt-5">
             <p
@@ -58,8 +64,8 @@ const Home = ({ onEnter }) => {
               <FiArrowRight className="h-7 group-hover:translate-x-4 transition-transform" />
             </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      
     </section>
   );
 };
