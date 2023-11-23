@@ -11,6 +11,7 @@ import ContactMe from "./pages/ContactMe";
 import DotGroup from "./components/DotGroup";
 import NavBar from "./components/NavBar";
 import ParticlesBg from "./assets/ParticlesBg";
+import SocialSidebar from "./components/SocialSidebar";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -70,6 +71,12 @@ function App() {
           setSelectedPage={setSelectedPage}
           className="fixed z-40 right-0 top-1/2"
         />
+      )}
+      {isAboveMediumScreens && (
+        <SocialSidebar
+          className="fixed z-50 top-1/2"
+        />
+        
       )}
 
       {/*Pages */}

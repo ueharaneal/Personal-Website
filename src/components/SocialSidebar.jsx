@@ -1,12 +1,26 @@
-import React from 'react'
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+
+
 
 function SocialSidebar() {
+    const githubLink = "https://github.com/ueharaneal"
+    const linkedinLink = "https://www.linkedin.com/in/nealuehara/"
   return (
-    <div className="flex flex-row">
-      <div>GitHub</div>
-      <div>Linkdin</div>
+    <div className="flex flex-col">
+      <button
+        onClick={()=> window.open(githubLink, '_blank')}
+       className="flex flex-row fixed top-[50%] items-center space-x-6 pl-12 -mr-1 bg-gray-700 rounded-xl text-white z-50 left-0 transform -translate-x-2/3 hover:translate-x-0 hover:text-yellow-400 duration-300">
+        <span>Github</span>
+        <FaGithubSquare size={64} className="rounded-xl -mr-5" />
+      </button>
+      <button
+        onClick={()=> window.open(linkedinLink, '_blank')}
+       className="flex flex-row fixed  top-[41%]  items-center space-x-6 pl-9 -mr-1 bg-gray-700 rounded-xl text-white z-50 left-0 transform -translate-x-2/3 hover:translate-x-0 hover:text-yellow-400 duration-300">
+        <span>Linkedin</span>
+        <FaLinkedin size={63} className="rounded-xl -mr-5" />
+      </button>
     </div>
-  )
+  );
 }
 
-export default SocialSidebar
+export default SocialSidebar;
