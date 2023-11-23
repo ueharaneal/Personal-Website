@@ -56,7 +56,7 @@ const MainProjectsDisplay = () => {
           </div>
         </div>
         <AnimatePresence mode="wait">
-              <motion.div/>
+              <motion.div className="absolute bg-white z-10 h-10 w-20 "/>
               <motion.video
                 key={imgSrc}
                 initial={{ opacity: 0 }}
