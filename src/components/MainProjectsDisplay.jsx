@@ -38,8 +38,8 @@ const MainProjectsDisplay = () => {
   const [open, setOpen] = useState(solutions[0].id);
   const imgSrc = solutions.find((s) => s.id === open)?.imgSrc;
   return (
-    <section className="px-6 text-white ">
-      <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px] relative">
+    <section className="px-4 md:px-6 py-6 text-white">
+      <div className="max-w-5xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-[1fr_350px] relative">
         <div>
           <div className="flex flex-col gap-4">
             {solutions.map((q) => {
@@ -106,7 +106,7 @@ const Solution = ({
             animate={{
               color: isOpen ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 1)",
             }}
-            className="text-2xl font-bold w-fit bg-gradient-to-r from-[#fac003] to-[#e3d42e] bg-clip-text"
+            className=" text-lg md:text-2xl font-bold w-fit bg-gradient-to-r from-[#fac003] to-[#e3d42e] bg-clip-text"
           >
             {title}
           </motion.p>
