@@ -8,10 +8,10 @@ import Tech from '../components/Tech'
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="w-4/6 mx-auto pt-10 pb-24 text-[#EBE4D1] h-screen relative">
+    <section id="skills" className="w-4/6 mx-auto md:pt-10 mt:2 pb-24 text-[#EBE4D1] relative">
       <div className="">
           {/* HEADER AND IMAGE SECTION */}
-        <div className="md:flex md:justify-between md:gap-16 mt-28">
+        <div className="flex flex-col md:flex-row justify-between gap-16  md:mt-28">
           <motion.div
             className="md:w-1/3"
             initial="hidden"
@@ -31,20 +31,29 @@ const MySkills = () => {
               fames odio in at.
             </p>
           </motion.div>
-
-          <div className="md:flex md:flex-col md:justify-start md:w-2/3">
+          <motion.div
+            className="md:flex md:flex-col md:justify-start md:w-2/3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ delay: .5, duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <Tech />
-          </div>
+          </motion.div>
         </div>
 
       </div>
       
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32 ">
+      <div className="flex flex-col md:flex-row justify-between md:m-16 my-6 md:gap-32">
         {/* EXPERIENCE */}
         <motion.div
-          className="md:w-1/3 mt-10"
+          className="md:w-1/3 md:mt-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
@@ -59,7 +68,6 @@ const MySkills = () => {
           This is the description
         </SkillsMotion>
       
-
         {/* INNOVATIVE */}
         <SkillsMotion number="02" title="Innovative">
           This is the description

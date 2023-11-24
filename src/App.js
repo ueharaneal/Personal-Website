@@ -80,7 +80,7 @@ function App() {
       )}
 
       {/*Pages */}
-      <div className="mx-auto md:h-full relative">
+      <div className="mx-auto relative flex flex-col ">
         <div className="absolute inset-0 z-0">
           <ParticlesBg />
         </div>
