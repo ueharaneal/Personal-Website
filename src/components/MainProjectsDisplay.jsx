@@ -38,8 +38,8 @@ const MainProjectsDisplay = () => {
   const [open, setOpen] = useState(solutions[0].id);
   const imgSrc = solutions.find((s) => s.id === open)?.imgSrc;
   return (
-    <section className="px-6 text-white">
-      <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px]">
+    <section className="px-6 text-white ">
+      <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px] relative">
         <div>
           <div className="flex flex-col gap-4">
             {solutions.map((q) => {
@@ -56,13 +56,12 @@ const MainProjectsDisplay = () => {
           </div>
         </div>
         <AnimatePresence mode="wait">
-              <motion.div className="absolute bg-white z-10 h-10 w-20 "/>
               <motion.video
                 key={imgSrc}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="rounded-2xl z-20"
+                className="relative rounded-2xl z-30 border-2 border-[#241964]"
                 autoPlay
                 loop
                 muted
@@ -70,6 +69,9 @@ const MainProjectsDisplay = () => {
                 <source src={imgSrc} type="video/mp4" />
               </motion.video>
         </AnimatePresence>
+        <motion.div 
+        style={{ left: '66%' }}
+        className="absolute bottom-[50%] z-10 h-12 w-[30%] bg-gradient-to-r from-[#7B68EE] to-transparent"/>
       </div>
     </section>
   );
