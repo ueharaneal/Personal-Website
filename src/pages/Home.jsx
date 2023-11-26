@@ -21,7 +21,8 @@ const Home = ({ onEnter }) => {
         <motion.div
          initial={{opacity:0}}
          whileInView={{opacity:1}}
-         transition={{duration:2}}
+         viewport={{once:false, amount:.05}}
+         transition={{duration:3}}
           className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
             Your search for the right Software Developer ends here.

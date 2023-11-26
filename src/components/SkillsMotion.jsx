@@ -21,7 +21,7 @@ function SkillsMotion({number, title, children}) {
                 {title}
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 absolute right-0 top-0 ]" />
+            <div className="w-1/2 md:w-3/4 absolute right-0 top-0" />
           </div>
           <p className="mt-5">
             {children}

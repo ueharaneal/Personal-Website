@@ -100,7 +100,7 @@ const Solution = ({
         }}
         className="p-6 rounded-xl flex flex-col justify-between relative z-20"
       >
-        <div>
+        <div className="">
           <motion.p
             initial={false}
             animate={{
@@ -115,7 +115,7 @@ const Solution = ({
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            className="mt-4 "
+            className={`mt-4 overflow-auto ${isOpen ? 'max-h-40' : 'max-h-0'}`}
           >
             {description}
           </motion.p>
@@ -138,7 +138,7 @@ const Solution = ({
               opacity: isOpen ? 1 : 0,
             }}
             onClick={() => window.open(liveView, "_blank")}
-            className="border-2 border-slate-800 ml-4 -mr-3 -mb-7 mt-4 px-5 py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
+            className="relative z-60 border-2 border-slate-800  ml-2 md:ml-4 -mr-3 md:-mb-7 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>Live View</span>
             <FiArrowRight className="group-hover:translate-x-2 transition-transform " />

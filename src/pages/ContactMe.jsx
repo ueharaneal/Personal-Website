@@ -29,9 +29,9 @@ function ContactMe() {
             ease: "backInOut"
 
           }}
-          className="text-4xl  text-white mb-16 ml-10 font-semibold font-sans"
+          className="text-3xl md:text4xl text-white mb-16 ml-10 font-semibold font-sans"
          >
-          CONTACT<span className="text-[#7B68EE]  ml-2">ME</span>
+          CONTACT<span className="text-[#7B68EE] text-3xl md:text4xl ml-2">ME</span>
         </motion.div>
         <motion.div className="flex flex-row justify-center">
           {isAboveSmallScreens && <Terminal/>}
