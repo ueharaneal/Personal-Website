@@ -74,7 +74,7 @@ function App() {
       )}
       {isAboveMediumScreens && (
         <SocialSidebar
-          className="fixed z-50 top-1/2"
+          className="fixed z-50 left-0 top-1/2"
         />
         
       )}
