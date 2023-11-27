@@ -90,6 +90,9 @@ function App() {
         <Projects className="z-10" />
         <ContactMe className="z-10" />
       </div>
+      <div className="">
+        <a href="https://lordicon.com/">Icons by Lordicon.com</a>
+      </div>
     </div>
   );
 }

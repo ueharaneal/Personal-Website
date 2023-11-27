@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion'
+import Avatar from "../assets/avatar"
 
 
 function About() {
@@ -19,8 +20,9 @@ function About() {
           >
             Summary 
         </motion.div>
+      
         {/* summary img and text */}
-        <div className="">
+        <div className="flex flex-col md:flex-row">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -30,12 +32,18 @@ function About() {
               hidden:{opacity:0, x:-100},
               visible:{opacity:1, x:0}
             }}
-            className="p-7 bg-black/20 backdrop-blur-sm rounded-xl">
+            className="p-7 w-[70%] bg-black/20 backdrop-blur-sm rounded-xl">
             If this changes in master IDKKK K K KEKKDN:OESIDFJ:OESIJF      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae quia porro sunt dolores aut hic ut labore, placeat maxime, alias et non enim aspernatur quis facere harum magnam sed.
             Vero ducimus sequi unde tempore beatae soluta expedita tenetur facere illum in sint libero, eius numquam dolorem maiores earum cumque repellat voluptate ullam nam corporis adipisci delectus amet? Ut, deleniti.
             ga ipsa dolorem ex, totam inventore corporis, ipsum facere quasi culpa quod hic maxime sit molestias! Distinctio vel repellat alias error quaerat fugit officiis et saepe voluptates vitae?
           </motion.div>
-          
+          <Avatar
+           src="https://cdn.lordicon.com/mebvgwrs.json"
+           trigger="hover"
+           state="hover-wave"
+           colors="primary:#121331,secondary:#eac086,tertiary:#4bb3fd,quaternary:#242424,quinary:#7166ee"
+           style={{ width: '250px', height: '300px' }}
+          />
         </div>
           <motion.div
             className='font-bold font-sans text-3xl mt-5 mb-5 text-[#7B68EE]'
