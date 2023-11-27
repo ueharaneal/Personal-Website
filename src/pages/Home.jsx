@@ -7,7 +7,7 @@ import Resume from "../assets/SWE1023.pdf"
 import { FiArrowRight } from "react-icons/fi";
 
 
-const Home = ({ onEnter }) => {
+const Home = () => {
   const ref = useRef();
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const websiteCodeLink = "https://github.com/ueharaneal/Personal-Website"
@@ -19,10 +19,14 @@ const Home = ({ onEnter }) => {
       {/* Bg container */}
      
         <motion.div
-         initial={{opacity:0}}
-         whileInView={{opacity:1}}
-         viewport={{once:false, amount:.05}}
-         transition={{duration:2}}
+          initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 3 }}
+              variants={{
+                hidden: { opacity: 0, x: -120 },
+                visible: { opacity: 1, x: 0 },
+              }}
           className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
             Your search for the right Software Developer ends here.

@@ -16,7 +16,7 @@ const MySkills = () => {
             className="md:w-1/3"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, x: -50 },
@@ -35,7 +35,7 @@ const MySkills = () => {
             className="md:flex md:flex-col md:justify-start md:w-2/3"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: .5, duration: 1 }}
             variants={{
               hidden: { opacity: 0, y: -50 },
@@ -56,7 +56,7 @@ const MySkills = () => {
           className="md:w-1/3 md:mt-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, y: 50 },
