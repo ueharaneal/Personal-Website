@@ -2,28 +2,34 @@ import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineStar,
+  AiOutlineProject,
+  AiOutlineMessage,
+} from "react-icons/ai";
 
-
-const Link = ({ children, page, selectedPage, setSelectedPage }) => {
+const Link = ({ icon, children, page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase().replace(/\s+/g, "");
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-yellow-400" : ""}
-      hover:text-yellow-400 transition duration-500`}
+        hover:text-yellow-400 transition duration-400`}
       href={`#${lowerCasePage}`}
       onClick={() => {
         setSelectedPage(lowerCasePage);
         window.history.pushState({}, "", `#${lowerCasePage}`);
       }}
     >
-      <div>
-        {children}
-        {page}
+      <div className="flex items-center">
+        {icon && React.cloneElement(icon,{ className: "mr-5", size:32})}
+       
       </div>
     </AnchorLink>
   );
 };
-const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+const MobileNavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const navBarBackground = isTopOfPage ? "" : "bg-red";
@@ -51,32 +57,36 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className={`${navBarBackground} w-full text-[#EBE4D1] z-40 fixed top-6`}
+      className={`${navBarBackground} text-[#EBE4D1] z-40 fixed -top-3 w-full text-sm`}
     >
-      <div className="flex justify-center px-4">
-        <ul className="hidden md:flex flex-row mt-3 p-4 gap-10 uppercase rounded-full bg-[#7B68EE] bg-opacity-30 backdrop-blur-md border-b border-gray-800">
-          {/* Assuming you have a custom Link component */}
+      <div className="flex justify-center  w-full px-7 border-b-4 border-black">
+        <ul className="md:hidden flex flex-row justify-around mt-3 px-12 py-5 gap-3 bg-[#282727] bg-opacity-90" >
           <Link
+            icon={<AiOutlineHome />}
             page="Home"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
           <Link
+            icon={<AiOutlineUser />}
             page="About"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
           <Link
+            icon={<AiOutlineStar />}
             page="Skills"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
           <Link
+            icon={<AiOutlineProject />}
             page="Projects"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
           <Link
+            icon={<AiOutlineMessage />}
             page="Contact Me"
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
@@ -87,6 +97,6 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   );
 };
 
-export default NavBar;
+export default MobileNavBar;
 
 //[#7B68EE]

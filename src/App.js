@@ -10,6 +10,7 @@ import ContactMe from "./pages/ContactMe";
 
 import DotGroup from "./components/DotGroup";
 import NavBar from "./components/NavBar";
+import MobileNavBar from './components/MobileNavBar'
 import ParticlesBg from "./assets/ParticlesBg";
 import SocialSidebar from "./components/SocialSidebar";
 
@@ -28,7 +29,7 @@ function App() {
       const contactPos = document.getElementById("contactme")?.offsetTop || 0;
 
       const currentScrollPos = window.scrollY + window.innerHeight / 2; // Center of the screen
-
+      
       // Determine which section is currently in view
       if (currentScrollPos >= homePos && currentScrollPos < aboutPos) {
         window.history.pushState({}, '', '#home');
@@ -53,18 +54,24 @@ function App() {
         setSelectedPage("contactme");
       }
     }, 100)
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+    console.log(selectedPage)
   return (
     <div className="relative">
-      <NavBar
+      {isAboveMediumScreens? <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         className="fixed"
-      />
+      /> :  
+      <MobileNavBar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      className="fixed"
+      />}
       {isAboveMediumScreens && (
         <DotGroup
           selectedPage={selectedPage}
