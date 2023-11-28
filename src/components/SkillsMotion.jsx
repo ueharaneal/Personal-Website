@@ -16,12 +16,11 @@ function SkillsMotion({number, title, children}) {
         >
           <div className="relative">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">{number}</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
+              <p className="font-playfair font-bold ml-2 text-2xl md:text-4xl">{number}</p>
+              <h3 className="font-playfair font-semibold  text-[#7B68EE] text-2xl ml-3 mt-3 p-3 bg-gradient-to-r from-black/30  to-transparent backdrop-blur-sm rounded-xl">
                 {title}
-              </p>
+              </h3>
             </div>
-            <div className="w-1/2 md:w-3/4 absolute right-0 top-0" />
           </div>
           <p className="mt-5">
             {children}

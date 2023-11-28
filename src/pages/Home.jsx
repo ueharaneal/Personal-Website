@@ -25,7 +25,7 @@ const Home = () => {
                 hidden: { opacity: 0, x: -120 },
                 visible: { opacity: 1, x: 0 },
               }}
-          className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
+          className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px] z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
             Your search for the right Software Engineer ends here.
           </p>

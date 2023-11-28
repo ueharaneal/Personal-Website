@@ -1,5 +1,6 @@
 import aws from '../assets/tech/aws.png'
 import css from "../assets/tech/css.png";
+import csharp from '../assets/tech/csharp.png'
 import docker from "../assets/tech/docker.png";
 import git from "../assets/tech/git.png";
 import html from "../assets/tech/html.png";
@@ -38,6 +39,10 @@ const technologies = [
     {
       name: "Python",
       icon: python,
+    },
+    {
+      name: "C#",
+      icon: csharp,
     },
     {
       name: "Node JS",

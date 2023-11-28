@@ -11,7 +11,7 @@ function About() {
     <section
       ref={ref}
       id="about"
-      className="w-4/6 mx-auto md:pt-10 mt:2 pb-16 text-[#EBE4D1] relative"
+      className="w-4/6 mx-auto pt-10 mt:2 pb-16 text-[#EBE4D1] relative"
     >
       <div className=" text-white">
         <motion.h1

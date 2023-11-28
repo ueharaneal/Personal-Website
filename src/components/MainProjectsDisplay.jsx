@@ -71,7 +71,7 @@ const MainProjectsDisplay = () => {
         </AnimatePresence>
         <motion.div 
         style={{ left: '66%' }}
-        className="absolute bottom-[50%] z-10 h-12 w-[30%] bg-gradient-to-r from-[#7B68EE] to-transparent"/>
+        className="hidden md:block absolute bottom-[50%] z-10 h-12 w-[30%] bg-gradient-to-r from-[#7B68EE] to-transparent"/>
       </div>
     </section>
   );
@@ -115,7 +115,7 @@ const Solution = ({
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            className={`mt-4 overflow-auto ${isOpen ? 'max-h-40' : 'max-h-0'}`}
+            className={`mt-4 overflow-auto ${isOpen ? 'max-h-24 md:max-h-40' : 'max-h-0'}`}
           >
             {description}
           </motion.p>
@@ -127,7 +127,7 @@ const Solution = ({
               opacity: isOpen ? 1 : 0,
             }}
             onClick={() => window.open(codeLink, "_blank")}
-            className="border-2 border-slate-800 ml-4 mr-3 -mb-7 mt-4 px-5 py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-900 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
+            className="relative z-60 border-2 border-slate-800  ml-2 md:ml-4 -mr-3 md:-mb-7 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>See Code</span>
             <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
