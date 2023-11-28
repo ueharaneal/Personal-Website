@@ -14,7 +14,7 @@ function About() {
       className="w-4/6 mx-auto md:pt-10 mt:2 pb-16 text-[#EBE4D1] relative"
     >
       <div className=" text-white">
-        <motion.div
+        <motion.h1
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -23,11 +23,11 @@ function About() {
             hidden: { opacity: 0, y: -75 },
             visible: { opacity: 1, y: 0 },
           }}
-         className="font-bold font-sans text-4xl mt-5 mb-5">
+         className="font-bold font-sans text-3xl md:text-4xl mt-5 mb-5 p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
           ABOUT <span className="text-[#7B68EE]"> ME</span>
-        </motion.div> 
+        </motion.h1> 
         <div className="flex flex-col">
-          <motion.div 
+          <motion.h2 
             initial="hidden"
             whileInView="visible"
             transition={{ delay:.5, duration: 0.9 }}
@@ -36,9 +36,9 @@ function About() {
               hidden: { opacity: 0, y: -75 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-bold font-sans text-3xl mt-5 mb-5 text-[#7B68EE]/80">
+            className="font-bold font-sans text-3xl mt-5 ml-5 mb-5 text-[#7B68EE]/80 p-4 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
             Summary
-          </motion.div>
+          </motion.h2>
 
           {/* summary img and text */}
           <div className="flex flex-col items-center md:flex-row mb-24">
@@ -51,7 +51,7 @@ function About() {
                 hidden: { opacity: 0, x: -50 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="p-5 w-[70%] bg-black/20 backdrop-blur-sm rounded-xl"
+              className="p-5 w[-90%]  md:w-[70%] bg-black/20 backdrop-blur-sm rounded-xl"
             >
               Hey there! I'm all about the adrenaline rush – whether it's from a
               sticking a drop surfing, shredding a snowboard through a blizzard,
@@ -85,7 +85,7 @@ function About() {
             {/* experience and education container */}
             <div className="flex flex-col">
               <div className="flex flex-col px-2">
-                <div className="flex flex-row justify-end">
+                <div className="flex flex-row justify-center md:justify-end">
                   <motion.div 
                   initial="hidden"
                   whileInView="visible"
@@ -95,81 +95,39 @@ function About() {
                     hidden: { opacity: 0, x: 100 },
                     visible: { opacity: 1, x: 0 },
                   }}
-                  className="font-bold font-sans text-4xl mt-5 mb-5 w-fit p-7 bg-black/20 backdrop-blur-sm rounded-xl ">
+                  className="font-bold font-sans text-4xl mt-5 mb-10 w-fit p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl ">
                     My <span className="text-[#7B68EE]">Timeline</span>
                   </motion.div>
                 </div>
 
                 <ExperienceTimeline />
               </div>
-              {/* Educaton and Experience titles and paragraphs */}
-              <div className="flex flex-col md:flex-row space-x-7">
-                <div className="flex flex-col text-center ">
-                  <motion.div className="font-bold font-sans text-[#7B68EE]/80 text-3xl mt-5 mb-5 ">
-                    Experience
-                  </motion.div>
-
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.8 }}
-                    transition={{ duration: 1 }}
-                    variants={{
-                      hidden: { opacity: 0, x: -100 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                    className="p-7 bg-black/20 backdrop-blur-sm rounded-xl "
-                  >
-                    If this changes in master IDKKK K K KEKKDN:OESIDFJ:OESIJF
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                    molestiae quia porro sunt dolores aut hic ut labore, placeat
-                    maxime, alias et non enim aspernatur quis facere harum
-                    magnam sed. Vero ducimus sequi unde tempore beatae soluta
-                    expedita tenetur facere illum in sint libero, eius numquam
-                    dolorem maiores earum cumque repellat voluptate ullam nam
-                    corporis adipisci delectus amet? Ut, deleniti. ga ipsa
-                    dolorem ex, totam inventore corporis, ipsum facere quasi
-                    culpa quod hic maxime sit molestias! Distinctio vel repellat
-                    alias error quaerat fugit officiis et saepe voluptates
-                    vitae?
-                  </motion.div>
-                </div>
-
+             
                 {/* education/certifications */}
-                <div className="flex flex-col text-center">
-                  <motion.div className="font-bold font-sans text-[#7B68EE]/80 text-3xl mt-5 mb-5 ">
-                    Education/Certifications
-                  </motion.div>
+                <div className="flex flex-col mt-24">
+                  <motion.h2 className="font-bold font-sans text-[#7B68EE]/80 text-3xl ml-5 mt-5 mb-2 p-4 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
+                    Certifications
+                  </motion.h2>
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 1 }}
                     variants={{
-                      hidden: { opacity: 0, x: -100 },
-                      visible: { opacity: 1, x: 0 },
+                      hidden: { opacity: 0, y: 100 },
+                      visible: { opacity: 1, y: 0 },
                     }}
-                    className="p-7 bg-black/20 backdrop-blur-sm rounded-xl"
+                    className="p-7 bg-black/20 backdrop-blur-sm rounded-xl  justify-between font-bold text-left text-md md:text-xl space-y-7"
                   >
-                    If this changes in master IDKKK K K KEKKDN:OESIDFJ:OESIJF
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                    molestiae quia porro sunt dolores aut hic ut labore, placeat
-                    maxime, alias et non enim aspernatur quis facere harum
-                    magnam sed. Vero ducimus sequi unde tempore beatae soluta
-                    expedita tenetur facere illum in sint libero, eius numquam
-                    dolorem maiores earum cumque repellat voluptate ullam nam
-                    corporis adipisci delectus amet? Ut, deleniti. ga ipsa
-                    dolorem ex, totam inventore corporis, ipsum facere quasi
-                    culpa quod hic maxime sit molestias! Distinctio vel repellat
-                    alias error quaerat fugit officiis et saepe voluptates
-                    vitae?
+                    <p className="flex justify-between">AWS Cloud Practitioner Certification <span className="mt-5 text-xs md:text-lg text-gray-400">July 2023</span> </p>
+                    <p className="flex justify-between">CompTIA A+ <span className="mt-5  text-xs md:text-lg text-gray-400">July 2023</span></p>
+                    <p className="mt-3"> Countless of Udemy Courses 😅</p>
                   </motion.div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

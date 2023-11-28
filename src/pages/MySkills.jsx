@@ -23,9 +23,9 @@ const MySkills = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="font-semibold font-sans text-4xl mt-5 mb-5">
+            <h1 className="font-semibold font-sans text-4xl mt- mb-5 p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
               Technical <span className="text-[#7B68EE]">SKILLS</span>
-            </p>
+            </h1>
             <p className="mt-10 mb-7">
               Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
               fames odio in at.

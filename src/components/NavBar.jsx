@@ -51,7 +51,7 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
       <motion.nav 
       variants={{
         visible:{ y:0 }, 
-        hidden:{ y:"-140%"},
+        hidden:{ y:"-190%"},
       }}
       animate={hidden? "hidden" : "visible"}
       transition={{duration:0.4, ease:"easeInOut"}}
@@ -83,7 +83,7 @@ const NavBar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
           <div onClick={handleNav} className="flex justify-end items-end md:hidden ">
             {!nav ?<div className="flex rounded-full bg-gradient-to-r from-purple-400 to-[#7B68EE] p-3"><AiOutlineMenu/></div>:<div className="rounded-full bg-gradient-to-r from-purple-400 to-[#7B68EE] items-center p-3"><AiOutlineClose/></div>}
           </div>
-          <div className={!nav ? "fixed left-[-100%]":"fixed bg-[#000300] h-full w-[%60] left-0 top-0 border-r border-r-gray-800 ease-in-out duration-600 md:hidden "}>
+          <div className={!nav ? "fixed left-[-100%]":"fixed bg-[#000300] h-full w-[%60] left-0 top-0 border-r border-r-gray-800 ease-in-out duration-600 md:hidden z-100"}>
             <h1 className="text-[#7B68EE] font-burtons text-3xl font-bold pt-6 p-4">NU</h1>
             <ul className="flex flex-col  gap-6 p-4 uppercase">
               <Link

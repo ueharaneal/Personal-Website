@@ -37,7 +37,7 @@ function ExperienceTimeline() {
             <h3 className="vertical-timeline-element-title font-bold text-md">B.S. Software Engineering</h3>
             <h4 className="vertical-timeline-element-subtitle text-sm">Western Governors University</h4>
             <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                Studied fundamentals of multiple programming languages such as (C# and Python).
             </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -51,7 +51,7 @@ function ExperienceTimeline() {
             <h3 className="vertical-timeline-element-title font-bold text-md">Software Engineer Intern</h3>
             <h4 className="vertical-timeline-element-subtitle text-sm">Street Sound Society </h4>
             <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                Collaborating with an Embedded Software Engineer to efficently match the user's access code with remote Arduino. 
             </p>
         </VerticalTimelineElement>
         </VerticalTimeline>

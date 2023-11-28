@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import Typed from "react-typed";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {motion} from "framer-motion";
@@ -8,7 +7,6 @@ import { FiArrowRight } from "react-icons/fi";
 
 
 const Home = () => {
-  const ref = useRef();
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const websiteCodeLink = "https://github.com/ueharaneal/Personal-Website"
   const buttonClassname =
@@ -22,14 +20,14 @@ const Home = () => {
           initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 3 }}
+              transition={{ duration: 2.2 }}
               variants={{
                 hidden: { opacity: 0, x: -120 },
                 visible: { opacity: 1, x: 0 },
               }}
           className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px]  p-3 z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
-            Your search for the right Software Developer ends here.
+            Your search for the right Software Engineer ends here.
           </p>
           <motion.button 
           whileHover={{scale:1.10, rotate:"2.5deg"}}
@@ -59,8 +57,7 @@ const Home = () => {
             </p>
           </div>
           <p className="text-gray-400 font-bold text-lg md:text-2xl mx-14">
-            Full-stack developer dedicated to problem solving, thriving in
-            dynamic learning.
+            Full-stack developer dedicated to problem solving
           </p>
           <div className="flex justify-center">
             <a href={Resume} target="_blank" rel="noopener noreferrer" className={`${buttonClassname} mr-2`}>See Resume <FiArrowRight className="h-7 group-hover:translate-x-4 transition-transform" /></a>
