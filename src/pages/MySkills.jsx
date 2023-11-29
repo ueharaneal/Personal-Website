@@ -8,7 +8,7 @@ const MySkills = () => {
   return (
     <section
       id="skills"
-      className="w-4/6 mx-auto pt-10 mt-2 pb-24 text-[#EBE4D1] relative"
+      className="w-4/6 mx-auto pt-10 mt-2 pb-20 text-[#EBE4D1] relative"
     >
       <div className="">
         {/* HEADER AND IMAGE SECTION */}
@@ -27,8 +27,9 @@ const MySkills = () => {
             <h1 className="font-semibold font-sans text-4xl mb-3 p-3 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl ">
               Technical <span className="text-[#7B68EE]">SKILLS</span>
             </h1>
-            <p className="mt-10 mb-6 bg-black/30 backdrop-blur-sm space-y-5 rounded-md p-5">
-              Aside from my mastered skills in leveraging ChatGPT and the art of efficient Googling, explore my other proficiencies below!
+            <p className="mt-10 mb-6 bg-black/30 backdrop-blur-sm space-y-5 text-lg rounded-md p-5">
+              Alongside my mastered skills in leveraging ChatGPT and the art of
+              efficient Googling. I invite you to explore my other proficiencies below!
             </p>
           </motion.div>
           <motion.div
@@ -57,42 +58,57 @@ const MySkills = () => {
               <span className="font-bold text-lg text-[#dfbe76]">
                 JavaScript:{" "}
               </span>{" "}
-              Expert in both front-end and back-end development.
+              Due to my expertise in both front-end(React) and back-end development(NodeJS),
+              Javascript is my go-to.
             </li>
             <li>
               {" "}
               <span className="font-bold text-lg text-[#dfbe76]">
                 Python:{" "}
               </span>{" "}
-              Skilled in writing clean, efficient code for server-side logic,
-              data manipulation, and automation.
+              Efficient programmer for web scraping(BS4), data manipulation(Pandas), and
+              exploration, leveraging Python’s extensive and versatile library
+              ecosystem.
             </li>
             <li>
               {" "}
               <span className="font-bold text-lg text-[#dfbe76]">
                 C#:{" "}
               </span>{" "}
-              Skilled in writing clean, efficient code for server-side logic,
-              data manipulation, and automation.
+               Strong knowledge of .NET frameworks and
+              object-oriented programming principles.
             </li>
           </ul>
         </SkillsMotion>
-        
 
-        
         <SkillsMotion number="02" title="Web Development">
           <ul className="bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6">
             <li>
               <span className="font-bold text-lg text-[#dfbe76]"> React: </span>{" "}
-              Advanced skills in building interactive UIs HTML5 & CSS3:
-              Proficient in crafting responsive designs with a keen eye for
-              aesthetics, including experience with CSS
+              I specialize in crafting dynamic, responsive user interfaces with a focus on performance and reusable components.
+            </li>
+            <li>
+              <span className="font-bold text-lg text-[#dfbe76]"> Redux: </span>{" "}
+              Redux Toolkit for efficient state slicing and leverage Redux Query for seamless data fetching and caching, ensuring optimal store management.
+            </li>
+            <li>
+              <span className="font-bold text-lg text-[#dfbe76]">
+                ExpressJS:{" "}
+              </span>{" "}
+              To conveniently build scalable server-side applications, harnessing its routing and middleware capabilities .{" "}
             </li>
             <li>
               <span className="font-bold text-lg text-[#dfbe76]">
                 Tailwind CSS:{" "}
               </span>{" "}
-              Skilled in using CSS frameworks for rapid and responsive design.{" "}
+              Rapid and responsive design.{" "}
+            </li>
+            <li>
+              {" "}
+              <span className="font-bold text-lg text-[#dfbe76]">
+                Hosting Services:{" "}
+              </span>{" "}
+              Web deployment using Hostinger and Heroku.
             </li>
           </ul>
         </SkillsMotion>
@@ -108,16 +124,30 @@ const MySkills = () => {
             <li>
               {" "}
               <span className="font-bold text-lg text-[#dfbe76]">
-                Hosting Services:{" "}
+                Docker & Kubernetes:{" "}
               </span>{" "}
-              Hostinger and Heroku.
+              Fundamental knowledge of environment consistency and application management at scale.
             </li>
             <li>
               {" "}
               <span className="font-bold text-lg text-[#dfbe76]">
-                Relational and Non-Relational Databases:{" "}
+                Relational Databases:{" "}
               </span>{" "}
-              Proficeint in mySql and MongoDb. 
+              Designed schemas, crafted complex SQL queries, and optimized databases for scalability using MySQL
+            </li>
+            <li>
+              {" "}
+              <span className="font-bold text-lg text-[#dfbe76]">
+                Non-Relational Databases:{" "}
+              </span>{" "}
+              Thanks to the user-friendly MongoDB Atlas, I can quickly create flexible data models with MongoDB.
+            </li>
+            <li>
+              {" "}
+              <span className="font-bold text-lg text-[#dfbe76]">
+                Github and Git:{" "}
+              </span>{" "}
+              Capable of version control to scale existing projects. I also have a strong familiarity with collaboritve workflows. 
             </li>
           </ul>
         </SkillsMotion>

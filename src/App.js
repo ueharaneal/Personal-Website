@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar";
 import MobileNavBar from './components/MobileNavBar'
 import ParticlesBg from "./assets/ParticlesBg";
 import SocialSidebar from "./components/SocialSidebar";
+import PingButton from './components/PingButton'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -57,7 +58,10 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-    console.log(selectedPage)
+    
+    const handlePingClick=()=>{
+      setSelectedPage("contactme")
+    }
   return (
     <div className="relative">
       {isAboveMediumScreens? <NavBar
@@ -84,6 +88,13 @@ function App() {
           className="fixed z-50 left-0 top-1/2"
         />
         
+      )}
+      {isAboveMediumScreens && (
+        <PingButton
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+          className="fixed z-40 right-0 "
+        />
       )}
 
       {/*Pages */}
