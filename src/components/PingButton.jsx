@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import InlineSVG from 'react-inlinesvg';
+import InlineSVG from "react-inlinesvg";
 import { FaPaperPlane } from "react-icons/fa";
- 
 
 const PingButton = ({ selectedPage, setSelectedPage }) => {
   return (
@@ -18,7 +17,7 @@ const LOOP_DURATION = 5;
 
 const Ping = () => {
   return (
-    <div className="relative">
+    <div className="relative cursor-pointer transform hover:scale-110">
       <Logo />
       <Band delay={0} />
       <Band delay={LOOP_DURATION * 0.25} />
@@ -31,15 +30,20 @@ const Ping = () => {
 const Logo = () => {
   return (
     <motion.div
-        initial="hidden"
-        whileInView
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ delay: 0.5, duration: 1.5 }}
+      variants={{
+        hidden: { opacity: 0, y: -75 },
+        visible: { opacity: 1, y: 0 }, 
+      }}
+      className="z-60"
     >
-        
-         <FaPaperPlane
-         className="text-white h-7 w-7"
-         />
+       <div className="">
+        <FaPaperPlane className="text-white h-7 w-7" />
+      </div>
     </motion.div>
-    
   );
 };
 

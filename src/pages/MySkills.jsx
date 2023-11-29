@@ -8,7 +8,7 @@ const MySkills = () => {
   return (
     <section
       id="skills"
-      className="w-4/6 mx-auto pt-10 mt-2 pb-20 text-[#EBE4D1] relative"
+      className="w-4/6 mx-auto mt-2 pb-20 text-[#EBE4D1] relative"
     >
       <div className="">
         {/* HEADER AND IMAGE SECTION */}
