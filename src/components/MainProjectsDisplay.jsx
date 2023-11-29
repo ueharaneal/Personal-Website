@@ -13,6 +13,7 @@ const solutions = [
     codeLink:
       "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
     liveView: "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/",
+    technologies: "React, Redux",
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const solutions = [
 
     codeLink: "https://github.com/ueharaneal/Shazamify",
     liveView: "https://shazamify.com/",
+    technologies: "React, Redux Toolkit, GeoApify API, Shazam Core API, Tailwind CSS, Dynamic UI by Swiper",
   },
   {
     id: 3,
@@ -31,17 +33,20 @@ const solutions = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium in iusto iure aliquam commodi possimus eaque sit recusandae incidunt?",
     imgSrc:
       "https://media1.giphy.com/media/VkMV9TldsPd28/giphy.gif?cid=ecf05e478ipd21u861g034loyqpc66eseytcl7lzjbk1wqrh&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      
+    technologies: "React, Redux",
   },
 ];
 
 const MainProjectsDisplay = () => {
   const [open, setOpen] = useState(solutions[0].id);
   const imgSrc = solutions.find((s) => s.id === open)?.imgSrc;
+  const technologies = solutions.find((s) => s.id === open)?.technologies;
   return (
     <section className="px-4 md:px-6 py-6 text-white">
-      <div className="max-w-5xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-[1fr_350px] relative">
+      <div className="max-w-5xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
         <div>
-          <div className="flex flex-col gap-4">
+          <div className="col-span-1 md:col-span-2">
             {solutions.map((q) => {
               return (
                 <Solution
@@ -56,22 +61,25 @@ const MainProjectsDisplay = () => {
           </div>
         </div>
         <AnimatePresence mode="wait">
-              <motion.video
-                key={imgSrc}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="relative rounded-2xl z-30 border-2 border-[#241964]"
-                autoPlay
-                loop
-                muted
-              >
-                <source src={imgSrc} type="video/mp4" />
-              </motion.video>
+          <motion.video
+            key={imgSrc}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="col-span-1 rounded-2xl border-4 border-[#241964] mb-0"
+            autoPlay
+            loop
+            muted
+          >
+            <source src={imgSrc} type="video/mp4" />
+          </motion.video>
         </AnimatePresence>
-        <motion.div 
-        style={{ left: '66%' }}
-        className="hidden md:block absolute bottom-[50%] z-10 h-12 w-[30%] bg-gradient-to-r from-[#7B68EE] to-transparent"/>
+        <div className="col-span-1 md:col-start-2 md:row-start-2 md:mt-[-14rem] lg:mt-[-9rem]">
+        <div className="text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7">
+          <span className="font-bold text-lg text-[#fac003]">Technologies Used:</span>
+          <span className="ml-2 font-medium text-md text-[#EBE4D1]">{technologies}</span>
+        </div>
+      </div>
       </div>
     </section>
   );
@@ -96,9 +104,9 @@ const Solution = ({
       <motion.div
         initial={false}
         animate={{
-          height: isOpen ? "270px" : "72px",
+          height: isOpen ? "290px" : "93px",
         }}
-        className="p-6 rounded-xl flex flex-col justify-between relative z-20"
+        className="p-6 rounded-xl flex flex-col justify-between relative z-20 "
       >
         <div className="">
           <motion.p
@@ -115,19 +123,21 @@ const Solution = ({
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            className={`mt-4 overflow-auto ${isOpen ? 'max-h-24 md:max-h-40' : 'max-h-0'}`}
+            className={`mt-4 overflow-auto ${
+              isOpen ? "md:max-h-24 lg:max-h-40" : "max-h-0"
+            }`}
           >
             {description}
           </motion.p>
         </div>
-        <div className="flex flex-row relative justify-around mb-3">
+        <div className="flex flex-row relative justify-around">
           <motion.button
             initial={false}
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
             onClick={() => window.open(codeLink, "_blank")}
-            className="relative z-60 border-2 border-slate-800  ml-2 md:ml-4 -mr-3 md:-mb-7 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
+            className="relative z-60 border-2 border-slate-800 md:text-sm lg:text-base ml-2 md:ml-4 mr-3 md:mb-2 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>See Code</span>
             <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -138,10 +148,10 @@ const Solution = ({
               opacity: isOpen ? 1 : 0,
             }}
             onClick={() => window.open(liveView, "_blank")}
-            className="relative z-60 border-2 border-slate-800  ml-2 md:ml-4 -mr-3 md:-mb-7 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
+            className="relative z-60 border-2 border-slate-800 md:text-sm lg:text-base ml-2 md:ml-4 -mr-3 md:mb-2 mt-2 md:mt-4 px-4 py-2 md:px-5 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>Live View</span>
-            <FiArrowRight className="group-hover:translate-x-2 transition-transform " />
+            <FiArrowRight className=" group-hover:translate-x-2 transition-transform" />
           </motion.button>
         </div>
       </motion.div>
@@ -150,9 +160,9 @@ const Solution = ({
         animate={{
           opacity: isOpen ? 1 : 0,
         }}
-        className="absolute inset-0 z-10  border-2 border-[#fac003] rounded-3xl bg-gradient-to-r from-[#644bf2] to-transparent"
+        className="absolute inset-0 z-10 my-2 border-2 border-[#fac003] rounded-3xl bg-gradient-to-r from-[#644bf2] to-transparent"
       />
-      <div className="absolute inset-0 z-0 border-4 border-[#231a5e] bg-[#6A5ACD] rounded-3xl bg-opacity-90" />
+      <div className="absolute my-1 inset-0 z-0 border-4 border-[#231a5e] bg-[#6A5ACD] rounded-3xl bg-opacity-90" />
     </div>
   );
 };
