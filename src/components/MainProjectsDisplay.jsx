@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+
+
 import ShazamifyGif from "../assets/projectVideos/ShazamifyGIF.mov";
+import WdidwGIF from '../assets/projectVideos/WdidwGIF.mov'
 const solutions = [
   {
     id: 1,
     title: "WDIDW-Survey Application",
     description:
       "This website/application empowers business owners and individuals to effortlessly distribute email surveys to their contact lists. All survey responses are securely stored, facilitating easy access and review.",
-    imgSrc:
-      "https://media2.giphy.com/media/SsTcO55LJDBsI/giphy.gif?cid=ecf05e47hfid50hu34mzkabzoy46hrftyl6g6656uygzmnpy&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+    imgSrc: WdidwGIF,
     codeLink:
       "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
     liveView: "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/",
-    technologies: "React, Redux",
+    technologies: "React, Redux, ExpressJS, MongoDB, Passport.js, Stripe, SendGrid, Materialize CSS",
   },
   {
     id: 2,
