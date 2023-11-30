@@ -13,7 +13,7 @@ function About() {
       id="about"
       className="w-4/6 mx-auto pt-10 mt:2 pb-16 text-[#EBE4D1] relative"
     >
-      <div className=" text-white">
+      <div className=" text-[#EBE4D1]">
         <motion.h1
           initial="hidden"
           whileInView="visible"

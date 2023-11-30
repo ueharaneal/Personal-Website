@@ -1,5 +1,4 @@
 import Typed from "react-typed";
-import useMediaQuery from "../hooks/useMediaQuery";
 import {motion} from "framer-motion";
 
 import Resume from "../assets/SWE1023.pdf"
@@ -7,7 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 
 const Home = () => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  
   const websiteCodeLink = "https://github.com/ueharaneal/Personal-Website"
   const buttonClassname =
     "flex flex-row justify-between bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md font-medium mx-auto py-2 px-6 my-8 w-[120px] md:w-[200px] md:text-lg hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-gray-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-[#6754DA] group";

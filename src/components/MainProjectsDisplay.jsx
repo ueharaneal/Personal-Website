@@ -15,7 +15,7 @@ const solutions = [
     codeLink:
       "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
     liveView: "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/",
-    technologies: "React, Redux, ExpressJS, MongoDB, Passport.js, Stripe, SendGrid, Materialize CSS",
+    technologies: "React, Redux, ExpressJS, MongoDB, Passport.js, Stripe, SendGrid and Materialize CSS",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const solutions = [
 
     codeLink: "https://github.com/ueharaneal/Shazamify",
     liveView: "https://shazamify.com/",
-    technologies: "React, Redux Toolkit, GeoApify API, Shazam Core API, Tailwind CSS, Dynamic UI by Swiper",
+    technologies: "React, Redux Toolkit, GeoApify API, Shazam Core API, Tailwind CSS and dynamic components by Swiper",
   },
   {
     id: 3,
