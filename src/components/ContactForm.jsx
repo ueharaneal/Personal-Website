@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
+import emailjs from 'emailjs-com'
 
 import mail from "../assets/mail.mp4";
 import { FiArrowRight } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
+
 
 function ContactForm() {
   const {
@@ -10,15 +12,26 @@ function ContactForm() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
+
+
+  
+  //emailjs
+  emailjs.init("your_user_id");
+
+  //handle submit 
+  const onSubmit = (e) => {
+    e.preventDefault()
+    console.log(e);
+    emailjs.sendForm("service_d82z7rc", )
   };
+
+
   return (
     <div className="flex text-[#e1d5b7] mb-16">
-      <div className="flex flex-row items-end">
+      <div className="flex flex-col md:flex-row text-[#e1d5b7] mb-16 items-center md:items-end">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col justify-start p-12 pr-72 bg-[rgb(94,69,235)]/60 backdrop-blur-md border-4 rounded-xl border-[#1b1059] space-y-5"
+          className="flex flex-col justify-start p-6 md:p-12 w-full md:w-auto md:pr-72 bg-[rgb(94,69,235)]/60 backdrop-blur-md border-4 rounded-xl border-[#1b1059] space-y-5"
         >
           <p className=" whitespace-nowrap font-heavy text-3xl">
             Send me a{" "}
@@ -64,7 +77,7 @@ function ContactForm() {
             </button>
           </div>
         </form>
-        <div className="flex flex-col justify-center h-[70%] w-[40%] px-16 -ml-32 -mb-4 p-8 z-40 text-black rounded-2xl  bg-[#e1d5b7] border-8 border-[#7B68EE]">
+        <div className="flex flex-col justify-center w-full md:w-[40%] px-6 md:px-16 mt-10 md:mt-0 md:-ml-32 md:-mb-4 p-8 text-black rounded-2xl bg-[#e1d5b7] border-8 border-[#7B68EE] z-50">
           <h2 className="font-bold text-xl font-sans md:text-2xl  p-2 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
             Let's <span className="text-[#7B68EE]"> Collaborate</span>!
           </h2>

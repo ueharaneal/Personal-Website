@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm'
 function ContactMe() {
   const ref = useRef(null);
   return (
-    <section ref={ref} id="contactme" className="mx-auto w-4/6 flex flex-col mb-12 relative text-[#EBE4D1]">
+    <section ref={ref} id="contactme" className=" mt-64 md:mt-0 mx-auto w-4/6 flex flex-col mb-12 relative text-[#EBE4D1]">
       <motion.h1
           initial="hidden"
           whileInView="visible"
