@@ -22,7 +22,14 @@ function ContactForm() {
   const onSubmit = (e) => {
     e.preventDefault()
     console.log(e);
-    emailjs.sendForm("service_d82z7rc", )
+    emailjs.sendForm("service_d82z7rc", "contact_form", "form", "6NelhU7I6BCkzAxzh")
+        .then((result)=>{
+            console.log(result.text)
+        }) (error) =>{
+            console.log(error.text)
+        }
+
+    e.target.reset()
   };
 
 
@@ -30,6 +37,7 @@ function ContactForm() {
     <div className="flex text-[#e1d5b7] mb-16">
       <div className="flex flex-col md:flex-row text-[#e1d5b7] mb-16 items-center md:items-end">
         <form
+          id="form"
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col justify-start p-6 md:p-12 w-full md:w-auto md:pr-72 bg-[rgb(94,69,235)]/60 backdrop-blur-md border-4 rounded-xl border-[#1b1059] space-y-5"
         >
