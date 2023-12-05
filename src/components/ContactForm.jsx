@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from 'emailjs-com'
+import emailjs from "emailjs-com";
+import { AnimatePresence, motion } from "framer-motion";
 
+import PopUp from "./PopUp";
 import mail from "../assets/mail.mp4";
 import { FiArrowRight } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
-
 
 function ContactForm() {
   const {
@@ -13,32 +15,44 @@ function ContactForm() {
     formState: { errors },
   } = useForm();
 
+  //Display Confirmation Pop up
+  const [showPopUp, setShowPopUp] = useState(false);
 
-  
+  function handleClose() {
+    setShowPopUp(false);
+  }
+
   //emailjs
   emailjs.init("your_user_id");
 
-  //handle submit 
-  const onSubmit = (e) => {
-    e.preventDefault()
+  //handle submit
+  const onSubmit = (data, e) => {
+    e.preventDefault();
     console.log(e);
-    emailjs.sendForm("service_d82z7rc", "contact_form", "form", "6NelhU7I6BCkzAxzh")
-        .then((result)=>{
-            console.log(result.text)
-        }) (error) =>{
-            console.log(error.text)
+    emailjs
+      .sendForm("service_d82z7rc", "contact_form", "form", "6NelhU7I6BCkzAxzh")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
         }
+      );
 
-    e.target.reset()
+    e.target.reset();
+    setShowPopUp(true);
   };
-
 
   return (
     <div className="flex text-[#e1d5b7] mb-16">
       <div className="flex flex-col md:flex-row text-[#e1d5b7] mb-16 items-center md:items-end">
-        <form
+        <motion.form
           id="form"
           onSubmit={handleSubmit(onSubmit)}
+          initial={{ x: -100, scale: 0.5 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{ duration: 1 }}
           className="flex flex-col justify-start p-6 md:p-12 w-full md:w-auto md:pr-72 bg-[rgb(94,69,235)]/60 backdrop-blur-md border-4 rounded-xl border-[#1b1059] space-y-5"
         >
           <p className=" whitespace-nowrap font-heavy text-3xl">
@@ -84,8 +98,13 @@ function ContactForm() {
               <FiArrowRight className="h-7 group-hover:translate-x-4 transition-transform" />
             </button>
           </div>
-        </form>
-        <div className="flex flex-col justify-center w-full md:w-[40%] px-6 md:px-16 mt-10 md:mt-0 md:-ml-32 md:-mb-4 p-8 text-black rounded-2xl bg-[#e1d5b7] border-8 border-[#7B68EE] z-50">
+        </motion.form>
+        <motion.div
+          initial={{ x: 100, scale: 0.5 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col justify-center w-full md:w-[40%] px-6 md:px-16 mt-10 md:mt-0 md:-ml-32 md:-mb-4 p-8 text-black rounded-2xl bg-[#e1d5b7] border-8 border-[#7B68EE] z-50"
+        >
           <h2 className="font-bold text-xl font-sans md:text-2xl  p-2 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
             Let's <span className="text-[#7B68EE]"> Collaborate</span>!
           </h2>
@@ -100,12 +119,15 @@ function ContactForm() {
             Lets build something amazing!
           </p>
           <div className="flex flex-row">
-            <MdEmail  size={48} className=" text-[#E97451] z-60 mr-2"/>
+            <MdEmail size={48} className=" text-[#E97451] z-60 mr-2" />
             <div className="py-3 z- 20 bg-gradient-to-r from-[#e3a18d] to-transparent backdrop-blur-sm rounded-xl">
-                <span className="px-3">Ueharaneal@gmail.com</span>
+              <span className="px-3">Ueharaneal@gmail.com</span>
             </div>
           </div>
-        </div>
+        </motion.div>
+        <AnimatePresence>
+          {showPopUp && <PopUp onClose={handleClose} />}
+        </AnimatePresence>
       </div>
     </div>
   );

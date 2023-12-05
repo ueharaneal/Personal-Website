@@ -2,9 +2,8 @@ import { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 
-
 import ShazamifyGif from "../assets/projectVideos/ShazamifyGIF.mov";
-import WdidwGIF from '../assets/projectVideos/WdidwGIF.mov'
+import WdidwGIF from "../assets/projectVideos/WdidwGIF.mov";
 const solutions = [
   {
     id: 1,
@@ -12,10 +11,12 @@ const solutions = [
     description:
       "This website/application empowers business owners and individuals to effortlessly distribute email surveys to their contact lists. All survey responses are securely stored, facilitating easy access and review.",
     imgSrc: WdidwGIF,
+
     codeLink:
       "https://github.com/ueharaneal/What-Did-I-Do-Wrong-Survey-Application",
     liveView: "https://hidden-ridge-03010-2e2246d75af4.herokuapp.com/",
-    technologies: "React, Redux, ExpressJS, MongoDB, Passport.js, Stripe, SendGrid and Materialize CSS",
+    technologies:
+      "React, Redux, ExpressJS, MongoDB, Passport.js, Stripe, SendGrid and Materialize CSS",
   },
   {
     id: 2,
@@ -26,7 +27,8 @@ const solutions = [
 
     codeLink: "https://github.com/ueharaneal/Shazamify",
     liveView: "https://shazamify.com/",
-    technologies: "React, Redux Toolkit, GeoApify API, Shazam Core API, Tailwind CSS and dynamic components by Swiper",
+    technologies:
+      "React, Redux Toolkit, GeoApify API, Shazam Core API, Tailwind CSS and dynamic components by Swiper",
   },
   {
     id: 3,
@@ -35,15 +37,17 @@ const solutions = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium in iusto iure aliquam commodi possimus eaque sit recusandae incidunt?",
     imgSrc:
       "https://media1.giphy.com/media/VkMV9TldsPd28/giphy.gif?cid=ecf05e478ipd21u861g034loyqpc66eseytcl7lzjbk1wqrh&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-      
+
     technologies: "React, Redux",
   },
 ];
 
 const MainProjectsDisplay = () => {
   const [open, setOpen] = useState(solutions[0].id);
-  const imgSrc = solutions.find((s) => s.id === open)?.imgSrc;
-  const technologies = solutions.find((s) => s.id === open)?.technologies;
+
+  const currentSolution = solutions.find((s) => s.id === open);
+  const imgSrc = currentSolution?.imgSrc;
+  const technologies = currentSolution?.technologies;
   return (
     <section className="px-4 md:px-6 py-6 text-white">
       <div className="max-w-5xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
@@ -65,9 +69,13 @@ const MainProjectsDisplay = () => {
         <AnimatePresence mode="wait">
           <motion.video
             key={imgSrc}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden:{ x: 100, scale: 0.5 },
+              visible:{ x: 0, scale: 1 }
+            }}
+            transition={{ delay: .3, duration: 1 }}
             className="col-span-1 rounded-2xl border-4 border-[#241964] mb-0"
             autoPlay
             loop
@@ -77,11 +85,23 @@ const MainProjectsDisplay = () => {
           </motion.video>
         </AnimatePresence>
         <div className="col-span-1 md:col-start-2 md:row-start-2 md:mt-[-14rem] lg:mt-[-9rem]">
-        <div className="text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7">
-          <span className="font-bold text-lg text-[#fac003]">Technologies Used:</span>
-          <span className="ml-2 font-medium text-md text-[#EBE4D1]">{technologies}</span>
+          <motion.div
+           initial="hidden"
+           whileInView="visible"
+           variants={{
+             hidden:{ x: 100, scale: 0.5 },
+             visible:{ x: 0, scale: 1 }
+           }}
+           transition={{ delay: .3, duration: 1 }}
+           className="text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7">
+            <span className="font-bold text-lg text-[#fac003]">
+              Technologies Used:
+            </span>
+            <span className="ml-2 font-medium text-md text-[#EBE4D1]">
+              {technologies}
+            </span>
+          </motion.div>
         </div>
-      </div>
       </div>
     </section>
   );
@@ -99,7 +119,14 @@ const Solution = ({
   const isOpen = index === open;
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden:{ x: -100, scale: 0.5 },
+        visible:{ x: 0, scale: 1 }
+      }}
+      transition={{ delay: .3, duration: 1 }}
       onClick={() => setOpen(index)}
       className="p-0.5 rounded-lg relative overflow-hidden cursor-pointer"
     >
@@ -165,7 +192,7 @@ const Solution = ({
         className="absolute inset-0 z-10 my-2 border-2 border-[#fac003] rounded-3xl bg-gradient-to-r from-[#644bf2] to-transparent"
       />
       <div className="absolute my-1 inset-0 z-0 border-4 border-[#231a5e] bg-[#6A5ACD] rounded-3xl bg-opacity-90" />
-    </div>
+    </motion.div>
   );
 };
 
