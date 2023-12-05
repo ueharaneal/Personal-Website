@@ -60,13 +60,15 @@ const MobileNavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       className={`${navBarBackground} text-[#EBE4D1] z-40 fixed -top-3 w-full text-sm`}
     >
       <div className="flex justify-center w-full border-b-4 border-black">
-        <ul className="md:hidden flex flex-row  w-full justify-around mt-3 px-26 py-5 gap-3 bg-[#282727] bg-opacity-90" >
-          <Link
-            icon={<AiOutlineHome />}
-            page="Home"
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
+        <ul className="md:hidden flex flex-row w-full justify-around mt-3 px-26 py-5 gap-3 bg-[#282727] bg-opacity-90" >
+          <div className="pl-8">
+            <Link
+              icon={<AiOutlineHome />}
+              page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          </div>
           <Link
             icon={<AiOutlineUser />}
             page="About"

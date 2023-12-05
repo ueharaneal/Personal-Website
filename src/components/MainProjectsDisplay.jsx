@@ -166,7 +166,7 @@ const Solution = ({
               opacity: isOpen ? 1 : 0,
             }}
             onClick={() => window.open(codeLink, "_blank")}
-            className="relative z-60 border-2 border-slate-800 md:text-sm lg:text-base ml-2 md:ml-4 mr-3 md:mb-2 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
+            className="relative z-60 border-2 border-slate-800 text-xs md:text-sm lg:text-base ml-2 md:ml-4 mr-3 md:mb-2 mt-2 md:mt-4 px-3 md:px-5 md:py-2 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>See Code</span>
             <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -177,7 +177,7 @@ const Solution = ({
               opacity: isOpen ? 1 : 0,
             }}
             onClick={() => window.open(liveView, "_blank")}
-            className="relative z-60 border-2 border-slate-800 md:text-sm lg:text-base ml-2 md:ml-4 -mr-3 md:mb-2 mt-2 md:mt-4 px-4 py-2 md:px-5 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
+            className="relative z-60 border-2 border-slate-800 text-xs md:text-sm lg:text-base ml-2 md:ml-4 -mr-3 md:mb-2 mt-2 md:mt-4 px-4 py-2 md:px-5 rounded-b-2xl flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-indigo-600 to-indigo-800 hover:from-indigo-800 hover:to-indigo-900 hover:text-[#EBE4D1]"
           >
             <span>Live View</span>
             <FiArrowRight className=" group-hover:translate-x-2 transition-transform" />
