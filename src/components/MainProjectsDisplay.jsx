@@ -75,7 +75,7 @@ const MainProjectsDisplay = () => {
               hidden:{ x: 100, scale: 0.5 },
               visible:{ x: 0, scale: 1 }
             }}
-            transition={{ delay: .3, duration: 1 }}
+            transition={{ delay: .3, duration: .6 }}
             className="col-span-1 rounded-2xl border-4 border-[#241964] mb-0"
             autoPlay
             loop
@@ -92,12 +92,12 @@ const MainProjectsDisplay = () => {
              hidden:{ x: 100, scale: 0.5 },
              visible:{ x: 0, scale: 1 }
            }}
-           transition={{ delay: .3, duration: 1 }}
+           transition={{ delay: .3, duration: .6 }}
            className="text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7">
-            <span className="font-bold text-lg text-[#fac003]">
+            <span className="font-bold  text-base md:text-lg text-[#fac003]">
               Technologies Used:
             </span>
-            <span className="ml-2 font-medium text-md text-[#EBE4D1]">
+            <span className="ml-2 font-medium  text-sm md:text-base text-[#EBE4D1]">
               {technologies}
             </span>
           </motion.div>
@@ -126,7 +126,7 @@ const Solution = ({
         hidden:{ x: -100, scale: 0.5 },
         visible:{ x: 0, scale: 1 }
       }}
-      transition={{ delay: .3, duration: 1 }}
+      transition={{ delay: .3, duration: .6 }}
       onClick={() => setOpen(index)}
       className="p-0.5 rounded-lg relative overflow-hidden cursor-pointer"
     >
@@ -152,8 +152,8 @@ const Solution = ({
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            className={`mt-4 overflow-auto ${
-              isOpen ? "md:max-h-24 lg:max-h-40" : "max-h-0"
+            className={`mt-4 overflow-auto text-sm md:text-base ${
+              isOpen ? "md:max-h-20 lg:max-h-40" : "max-h-0"
             }`}
           >
             {description}

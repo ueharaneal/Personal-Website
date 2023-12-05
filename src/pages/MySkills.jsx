@@ -27,9 +27,9 @@ const MySkills = () => {
             <h1 className="font-semibold font-sans text-4xl mb-3 p-3 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl ">
               Technical <span className="text-[#7B68EE]">SKILLS</span>
             </h1>
-            <p className="mt-10 mb-6 bg-black/30 backdrop-blur-sm space-y-5 text-lg rounded-md p-5">
-              Alongside my mastered skills in leveraging ChatGPT and the art of
-              efficient Googling. I invite you to explore my other proficiencies below!
+            <p className="mt-10 mb-6 bg-black/30 backdrop-blur-sm space-y-5 text-sm md:text-lg rounded-md p-5">
+              Alongside my mastered skills in leveraging <span className="text-[#dfbe76]">CnatGPT</span> and the art of
+              efficient <span className="text-[#dfbe76]">Googling</span>. I invite you to explore my other proficiencies below!
             </p>
           </motion.div>
           <motion.div
@@ -49,13 +49,13 @@ const MySkills = () => {
       </div>
 
       {/* SKILLS */}
-      <div className="flex flex-col md:flex-row md:justify-between items-start md:space-x-10 my-6">
+      <div className="flex flex-col md:flex-row md:justify-between items-start md:space-x-10 my-6 text-sm md:text-base" >
         {/* EXPERIENCE */}
 
         <SkillsMotion number="01" title="Programming Languages">
-          <ul className="bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6">
+          <ul className="bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6 ">
             <li>
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 JavaScript:{" "}
               </span>{" "}
               Due to my expertise in both front-end(React) and back-end development(NodeJS),
@@ -63,7 +63,7 @@ const MySkills = () => {
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Python:{" "}
               </span>{" "}
               Efficient programmer for web scraping(BS4), data manipulation(Pandas), and
@@ -72,7 +72,7 @@ const MySkills = () => {
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 C#:{" "}
               </span>{" "}
                Strong knowledge of .NET frameworks and
@@ -84,28 +84,28 @@ const MySkills = () => {
         <SkillsMotion number="02" title="Web Development">
           <ul className="bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6">
             <li>
-              <span className="font-bold text-lg text-[#dfbe76]"> React: </span>{" "}
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]"> React: </span>{" "}
               I specialize in crafting dynamic, responsive user interfaces with a focus on performance and reusable components.
             </li>
             <li>
-              <span className="font-bold text-lg text-[#dfbe76]"> Redux: </span>{" "}
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]"> Redux: </span>{" "}
               Redux Toolkit for efficient state slicing and leverage Redux Query for seamless data fetching and caching, ensuring optimal store management.
             </li>
             <li>
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 ExpressJS:{" "}
               </span>{" "}
               To conveniently build scalable server-side applications, harnessing its routing and middleware capabilities .{" "}
             </li>
             <li>
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Tailwind CSS:{" "}
               </span>{" "}
               Rapid and responsive design.{" "}
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Hosting Services:{" "}
               </span>{" "}
               Web deployment using Hostinger and Heroku.
@@ -116,35 +116,35 @@ const MySkills = () => {
         <SkillsMotion number="03" title="Other Technologies">
           <ul className="bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6">
             <li>
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Cloud Services:{" "}
               </span>{" "}
               Experience with cloud platforms like AWS.
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Docker & Kubernetes:{" "}
               </span>{" "}
               Fundamental knowledge of environment consistency and application management at scale.
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Relational Databases:{" "}
               </span>{" "}
               Designed schemas, crafted complex SQL queries, and optimized databases for scalability using MySQL
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Non-Relational Databases:{" "}
               </span>{" "}
               Thanks to the user-friendly MongoDB Atlas, I can quickly create flexible data models with MongoDB.
             </li>
             <li>
               {" "}
-              <span className="font-bold text-lg text-[#dfbe76]">
+              <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Github and Git:{" "}
               </span>{" "}
               Capable of version control to scale existing projects. I also have a strong familiarity with collaboritve workflows. 

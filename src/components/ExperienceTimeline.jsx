@@ -12,22 +12,22 @@ function ExperienceTimeline() {
     <div>
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--education"
+          className="vertical-timeline-element--work"
           contentStyle={{ background: "#7B68EE", color: "#EBE4D1" }}
-          contentArrowStyle={{ borderRight: "9px solid  #fff600" }}
-          date="Current"
+          contentArrowStyle={{ borderRight: "7px solid  #fff600" }}
+          date="June 2023 - Sept 2023"
           iconStyle={{ background: "#FF3333", color: "#EBE4D1" }}
-          icon={<FaClipboardQuestion />}
+          icon={<MdOutlineWork />}
         >
           <h3 className="vertical-timeline-element-title font-bold text-[#dfbe76] text-lg">
-            What's next?
+            Software Engineer Intern
           </h3>
           <h4 className="vertical-timeline-element-subtitle text-sm">
-            Insert your company.
+            Street Sound Society{" "}
           </h4>
           <p>
-            Enjoyed what you’ve seen? Don’t hesitate to reach out through the
-            contact form below!
+            I synchronized user access codes with a remote Arduino system to
+            enhance efficiency and accuracy.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -51,22 +51,22 @@ function ExperienceTimeline() {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--education"
           contentStyle={{ background: "#7B68EE", color: "#EBE4D1" }}
-          contentArrowStyle={{ borderRight: "7px solid  #fff600" }}
-          date="June 2023 - Sept 2023"
+          contentArrowStyle={{ borderRight: "9px solid  #fff600" }}
+          date="Current"
           iconStyle={{ background: "#FF3333", color: "#EBE4D1" }}
-          icon={<MdOutlineWork />}
+          icon={<FaClipboardQuestion />}
         >
           <h3 className="vertical-timeline-element-title font-bold text-[#dfbe76] text-lg">
-            Software Engineer Intern
+            What's next?
           </h3>
           <h4 className="vertical-timeline-element-subtitle text-sm">
-            Street Sound Society{" "}
+            Insert your company.
           </h4>
           <p>
-            I synchronized user access codes with a remote Arduino system to
-            enhance efficiency and accuracy.
+            Enjoyed what you’ve seen? Don’t hesitate to reach out through the
+            contact form below!
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>

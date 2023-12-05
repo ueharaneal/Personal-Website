@@ -11,7 +11,7 @@ function About() {
     <section
       ref={ref}
       id="about"
-      className="w-4/6 mx-auto pt-10 mt:2 pb-16 text-[#EBE4D1] relative"
+      className="w-4/6 mx-auto pt-10  pb-16 text-[#EBE4D1] relative"
     >
       <div className=" text-[#EBE4D1]">
         <motion.h1
@@ -36,7 +36,7 @@ function About() {
               hidden: { opacity: 0, y: -75 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="font-bold font-sans text-3xl mt-5 ml-5 mb-5 text-[#7B68EE]/80 p-4 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
+            className="font-bold font-sans text-2xl md:text-3xl mt-5 ml-5 mb-5 text-[#7B68EE]/80 p-4 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit">
             Summary
           </motion.h2>
 
@@ -51,7 +51,7 @@ function About() {
                 hidden: { opacity: 0, x: -50 },
                 visible: { opacity: 1, x: 0 },
               }}
-              className="p-5 w[-90%]  md:w-[70%] bg-black/20 backdrop-blur-sm rounded-xl"
+              className="p-5 w[-90%] text-sm md:text-base md:w-[70%] bg-black/20 backdrop-blur-sm rounded-xl"
             >
               Hey there! I'm all about the adrenaline rush – whether it's from a
               sticking a drop surfing, shredding a snowboard through a blizzard,
@@ -95,7 +95,7 @@ function About() {
                     hidden: { opacity: 0, x: 100 },
                     visible: { opacity: 1, x: 0 },
                   }}
-                  className="font-bold font-sans text-4xl mt-5 mb-10 w-fit p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl ">
+                  className="font-bold font-sans text-2xl md:text-4xl md:mt-5 mb-10 w-fit p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl ">
                     My <span className="text-[#7B68EE]">Timeline</span>
                   </motion.div>
                 </div>
@@ -117,11 +117,11 @@ function About() {
                       hidden: { opacity: 0, y: 100 },
                       visible: { opacity: 1, y: 0 },
                     }}
-                    className="p-7 bg-black/20 backdrop-blur-sm rounded-xl  justify-between font-bold text-left text-md md:text-xl space-y-7"
+                    className="p-6 bg-black/20 backdrop-blur-sm rounded-xl  justify-between font-bold text-left text-base md:text-xl space-y-7"
                   >
-                    <p className="flex justify-between">AWS Cloud Practitioner Certification <span className="mt-5 text-xs md:text-lg text-gray-400">July 2023</span> </p>
+                    <p className="flex justify-between">AWS Cloud Practitioner Certification <span className="mt-5 text-xs md:text-lg whitespace-nowrap text-gray-400">July 2023</span> </p>
                     <p className="flex justify-between">CompTIA A+ <span className="mt-5  text-xs md:text-lg text-gray-400">July 2023</span></p>
-                    <p className="mt-3"> Countless of Udemy Courses 😅</p>
+                    <p className="mt-3"> <span className="text-[#dfbe76]">+</span> Countless of Udemy Courses 😅</p>
                   </motion.div>
                 </div>
               </div>

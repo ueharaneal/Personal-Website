@@ -71,7 +71,7 @@ function ContactForm() {
               {...register("name", { required: true })}
               className="border-4  border-gray-500 text-black p-2  rounded-md focus:outline-none"
             />
-            {errors.name && <p>Name is required</p>}
+            {errors.name && <p className="font-medium text-red-500">Name is required</p>}
             <p className=" mb-2 ml-3 mt-6">Email * </p>
             <input
               name="email"
@@ -80,7 +80,7 @@ function ContactForm() {
               {...register("email", { required: true })}
               className="border-4 border-gray-500 text-black p-2 rounded-md focus:outline-none"
             />
-            {errors.email && <p>Email is required</p>}
+            {errors.email && <p className="font-medium text-red-500">Email is required</p>}
             <p className="mb-2 ml-3 mt-6">Message * </p>
             <textarea
               name="message"
@@ -88,7 +88,7 @@ function ContactForm() {
               {...register("message", { required: true })}
               className="border-4  border-gray-500 text-black  p-2 rounded-md focus:outline-none"
             />
-            {errors.message && <p>Message is required</p>}
+            {errors.message && <p className="font-medium text-red-500">Message is required</p>}
 
             <button
               className="flex flex-row justify-between bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md font-medium mx-auto py-2 px-6 my-8 w-[120px] md:w-[200px] md:text-lg hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-gray-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-[#6754DA] group"
