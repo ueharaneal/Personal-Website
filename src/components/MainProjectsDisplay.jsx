@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import ShazamifyGif from "../assets/projectVideos/ShazamifyGIF.mov";
 import WdidwGIF from "../assets/projectVideos/WdidwGIF.mov";
+import ChatroomGIF from '../assets/projectVideos/ChatroomGIF.mov'
 const solutions = [
   {
     id: 1,
@@ -32,13 +33,12 @@ const solutions = [
   },
   {
     id: 3,
-    title: "Enterprise",
+    title: "NU ChatRoom",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium in iusto iure aliquam commodi possimus eaque sit recusandae incidunt?",
-    imgSrc:
-      "https://media1.giphy.com/media/VkMV9TldsPd28/giphy.gif?cid=ecf05e478ipd21u861g034loyqpc66eseytcl7lzjbk1wqrh&ep=v1_gifs_search&rid=giphy.gif&ct=g",
-
-    technologies: "React, Redux",
+      "This Nu ChatRoom will allow you to communicate with you friends in real time! (Live View Not Available)",
+      imgSrc: ChatroomGIF,
+    technologies: "Python, Flask, SocketIO",
+    codeLink: "https://github.com/ueharaneal/NU-ChatRoom",
   },
 ];
 

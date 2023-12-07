@@ -28,7 +28,7 @@ const MySkills = () => {
               Technical <span className="text-[#7B68EE]">SKILLS</span>
             </h1>
             <p className="mt-10 mb-6 bg-black/30 backdrop-blur-sm space-y-5 text-sm md:text-lg rounded-md p-5">
-              Alongside my mastered skills in leveraging <span className="text-[#dfbe76]">CnatGPT</span> and the art of
+              Alongside my mastered skills in leveraging <span className="text-[#dfbe76]">ChatGPT</span> and the art of
               efficient <span className="text-[#dfbe76]">Googling</span>. I invite you to explore my other proficiencies below!
             </p>
           </motion.div>
