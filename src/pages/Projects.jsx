@@ -14,7 +14,7 @@ function Projects({ onEnter }) {
       className="mx-auto w-5/6 flex justify-center h-screen relative"
     >
       <div
-        className="flex flex-col justify-center mt-28 md:mt-6"
+        className="flex flex-col justify-center mt-28 2xl:mt-0 md:mt-6"
       >
         <motion.h1
         initial={{ x: -200, scale: 0.5 }}

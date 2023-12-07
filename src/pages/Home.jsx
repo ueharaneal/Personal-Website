@@ -1,7 +1,7 @@
 import Typed from "react-typed";
 import {motion} from "framer-motion";
 
-import Resume from "../assets/SWE1023.pdf"
+import Resume from "../assets/SWE126.pdf"
 import { FiArrowRight } from "react-icons/fi";
 
 

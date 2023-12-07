@@ -1,6 +1,6 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { MdContactPage } from "react-icons/md";
-import resume from "../assets/SWE1023.pdf";
+import resume from "../assets/SWE126.pdf";
 
 function SocialSidebar() {
   const githubLink = "https://github.com/ueharaneal";
