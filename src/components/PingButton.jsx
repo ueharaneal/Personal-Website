@@ -69,7 +69,7 @@ const Band = ({ delay }) => {
         ease: "linear",
         delay,
       }}
-      className="absolute left-[50%] top-[50%] z-0 h-32 w-32 2xl:h-40 2xl:w-40 rounded-full border-[1px] border-violet-500 bg-gradient-to-br from-violet-500/50 to-violet-800/20 shadow-xl shadow-violet-500/40"
+      className="absolute left-[50%] top-[50%] z-0 h-32 w-32 2xl:h-38 2xl:w-38 rounded-full border-[1px] border-violet-500 bg-gradient-to-br from-violet-500/50 to-violet-800/20 shadow-xl shadow-violet-500/40"
     />
   );
 };

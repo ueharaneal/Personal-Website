@@ -21,8 +21,8 @@ const Home = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 2.2 }}
               variants={{
-                hidden: { opacity: 0, x: -120 },
-                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, y: 120 },
+                visible: { opacity: 1, y: 0 },
               }}
           className="relative flex flex-col h-screen w-full justify-center text-center mx-auto max-w-[800px] z-10">
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">

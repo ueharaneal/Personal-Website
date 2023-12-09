@@ -20,7 +20,7 @@ function ContactMe() {
             hidden: { opacity: 0, y: -75 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="font-bold font-sans text-3xl md:text-4xl  mt-4 md:my-6 ml-6 xl:ml-14  p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit"
+          className="font-bold font-sans text-3xl md:text-4xl  mt-4 md:my-6 ml-6 xl:ml-24  p-7 bg-gradient-to-r from-black/20  to-transparent backdrop-blur-sm rounded-xl w-fit"
         >
           Contact <span className="text-[#7B68EE]"> ME</span>
         </motion.h1>
