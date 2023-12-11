@@ -27,6 +27,12 @@ const Home = () => {
           <p className="text-[#7B68EE] md:text-lg font-bold  p-2">
             Your search for the right Software Engineer ends here.
           </p>
+          <motion.button
+            whileHover={{ scale: 1.1, rotate: "2.5deg" }}
+            className="font-bold text-center text-4xl sm:text-6xl md:text-7xl p-3 md:py-6"
+          >
+            Neal Uehara
+          </motion.button>
         </motion.div>
 
         <motion.div
@@ -39,13 +45,6 @@ const Home = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <motion.button
-            whileHover={{ scale: 1.1, rotate: "2.5deg" }}
-            className="font-bold text-center text-4xl sm:text-6xl md:text-7xl p-3 md:py-6"
-          >
-            Neal Uehara
-          </motion.button>
-
           <div className="flex flex-row text-center justify-center pt-3 md:pt-5">
             <p
               style={{ alignSelf: "flex-end" }}
