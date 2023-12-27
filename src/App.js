@@ -112,7 +112,7 @@ function App() {
 				<ContactMe className='z-10' />
 			</div>
 			<div className=''>
-				<a href='https://lordicon.com/'>Icons by Lordicon.com</a>
+				<a href='https://lordicon.com/'></a>
 			</div>
 		</div>
 	)
