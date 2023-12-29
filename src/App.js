@@ -62,9 +62,6 @@ function App() {
 		return () => window.removeEventListener("scroll", handleScroll)
 	}, [])
 
-	const handlePingClick = () => {
-		setSelectedPage("contactme")
-	}
 	return (
 		<div className='relative'>
 			{isAboveMediumScreens ? (
