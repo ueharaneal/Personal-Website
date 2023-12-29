@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react"
+import React, { useState, useEffect } from "react"
 import useMediaQuery from "./hooks/useMediaQuery"
 import { debounce } from "lodash"
 
