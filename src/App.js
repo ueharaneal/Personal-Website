@@ -17,7 +17,8 @@ import PingButton from "./components/PingButton"
 
 function App() {
 	const [selectedPage, setSelectedPage] = useState("home")
-	const [isTopOfPage, setIsTopOfPage] = useState(true)
+	const [isTopOfPage, setIsTopOfPage] = useState(true) //we do not need to setIsTopOfPage because the navBar is only checking a boolean
+
 	const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
 
 	//debounce for the sidebar to respond properly
@@ -110,7 +111,7 @@ function App() {
 				<ContactMe className='z-10' />
 			</div>
 			<div className=''>
-				<a href='https://lordicon.com/'></a>
+				<a href='https://lordicon.com/'>Lordicon Icon</a>
 			</div>
 		</div>
 	)
