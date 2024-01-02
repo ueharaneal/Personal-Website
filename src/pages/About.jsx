@@ -1,7 +1,6 @@
 import React, { useRef } from "react"
 import { motion } from "framer-motion"
 import Avatar from "../assets/avatar"
-import Experience from "../components/Experience"
 import ExperienceTimeline from "../components/ExperienceTimeline"
 
 function About() {
