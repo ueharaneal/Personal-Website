@@ -20,6 +20,7 @@ function App() {
 	const [isTopOfPage, setIsTopOfPage] = useState(true)
 	const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
 
+	//debounce for the sidebar to respond properly
 	useEffect(() => {
 		const handleScroll = debounce(() => {
 			// Get the position of each section
