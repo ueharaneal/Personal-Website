@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import ContactForm from "../components/ContactForm";
 
+//contact form component is the contact page 
 function ContactMe() {
   const ref = useRef(null);
   return (
