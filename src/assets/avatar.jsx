@@ -12,7 +12,7 @@ const Avatar = ({ src, trigger, state, colors, style }) => {
             document.body.removeChild(script);
         };
     }, []);
-
+//avatar icon
     return (
         <lord-icon
             src={src}
