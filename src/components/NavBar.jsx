@@ -82,4 +82,5 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
 export default NavBar
 
+//website color code
 //[#7B68EE]
