@@ -20,7 +20,7 @@ const Home = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 2.2 }}
           variants={{
-            hidden: { opacity: 0, y: -120 },
+            hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0 },
           }}
         >
@@ -41,7 +41,7 @@ const Home = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 2.2 }}
           variants={{
-            hidden: { opacity: 0, y: 120 },
+            hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
         >

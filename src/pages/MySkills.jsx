@@ -56,7 +56,7 @@ const MySkills = () => {
           <ul className="bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6 ">
             <li>
               <span className="font-bold text-base md:text-lg text-[#dfbe76]">
-                JavaScript:{" "}
+                JavaScript/TypeScript:{" "}
               </span>{" "}
               Due to my expertise in both front-end(React) and back-end development(NodeJS),
               Javascript is my go-to.
@@ -108,7 +108,7 @@ const MySkills = () => {
               <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Hosting Services:{" "}
               </span>{" "}
-              Web deployment using Hostinger and Heroku.
+              Web deployment using Vercel, Hostinger and Heroku.
             </li>
           </ul>
         </SkillsMotion>
@@ -140,7 +140,7 @@ const MySkills = () => {
               <span className="font-bold text-base md:text-lg text-[#dfbe76]">
                 Non-Relational Databases:{" "}
               </span>{" "}
-              Thanks to the user-friendly MongoDB Atlas, I can quickly create flexible data models with MongoDB.
+              Thanks to the user-friendly MongoDB Atlas, I can quickly create flexible data models with MongoDB and DynamoDB
             </li>
             <li>
               {" "}

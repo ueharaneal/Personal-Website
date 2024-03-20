@@ -26,8 +26,13 @@ function ExperienceTimeline() {
             Street Sound Society{" "}
           </h4>
           <p>
-            I synchronized user access codes with a remote Arduino system to
-            enhance efficiency and accuracy.
+            Contributed to the remote Raspberry Pi server configuration,
+            developed user passcode outputs to ensure seamless integration
+            between frontend and backend systems for an enhanced user
+            experience, employed React and Tailwind CSS to visually engage the
+            client and create user-centric UI components, and gained hands-on
+            experience with Amazon DynamoDB, integrating and managing the
+            database for seamless data interactions within the application.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
