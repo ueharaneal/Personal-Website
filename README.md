@@ -8,3 +8,4 @@ My Portfolio website. Let me know what you think! (NOTE: (03/21/24) Chrome brows
 5. email.js
 6. react-hook-form
 7. Hosted by Hostinger
+#planning to update soon! 
