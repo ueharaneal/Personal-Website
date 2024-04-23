@@ -1,5 +1,5 @@
 # Portfolio website
-My Portfolio website. Let me know what you think! (NOTE: (03/21/24) Chrome browser not correctly responsive) https://www.nealuehara.com/
+My Portfolio website. Let me know what you think! (NOTE: (04/21/24) Chrome browser not correctly responsive) https://www.nealuehara.com/
 # Technologies Used
 1. React
 2. Framer-motion
