@@ -9,4 +9,5 @@ My Portfolio website. Let me know what you think! (NOTE: (04/21/24) Chrome brows
 6. react-hook-form
 7. Hosted by Hostinger
 8. Tailwind css
+9. React email
 #planning to update soon! 
