@@ -84,21 +84,22 @@ const MySkills = () => {
 					</ul>
 				</SkillsMotion>
 
-				<SkillsMotion number='02' title='Web Development'>
+				<SkillsMotion number='02' title='Frameworks/Libaries'>
 					<ul className='bg-black/40 backdrop-blur-sm space-y-5 rounded-md p-6'>
 						<li>
 							<span className='font-bold text-base md:text-lg text-[#dfbe76]'>
 								{" "}
-								React:{" "}
+								NextJS/React:{" "}
 							</span>{" "}
 							I specialize in crafting dynamic, responsive user
 							interfaces with a focus on performance and reusable
 							components.
 						</li>
+
 						<li>
 							<span className='font-bold text-base md:text-lg text-[#dfbe76]'>
 								{" "}
-								Redux:{" "}
+								Zustand/Redux:{" "}
 							</span>{" "}
 							Redux Toolkit for efficient state slicing and leverage
 							Redux Query for seamless data fetching and caching,
@@ -113,16 +114,16 @@ const MySkills = () => {
 						</li>
 						<li>
 							<span className='font-bold text-base md:text-lg text-[#dfbe76]'>
+								TRPC:{" "}
+							</span>{" "}
+							To ship full-stack appilcations quickily with front-to-back
+							end type safety
+						</li>
+						<li>
+							<span className='font-bold text-base md:text-lg text-[#dfbe76]'>
 								Tailwind CSS:{" "}
 							</span>{" "}
 							Rapid and responsive design.{" "}
-						</li>
-						<li>
-							{" "}
-							<span className='font-bold text-base md:text-lg text-[#dfbe76]'>
-								Hosting Services:{" "}
-							</span>{" "}
-							Web deployment using Vercel, Hostinger and Heroku.
 						</li>
 					</ul>
 				</SkillsMotion>
@@ -166,6 +167,13 @@ const MySkills = () => {
 							</span>{" "}
 							Capable of version control to scale existing projects. I
 							also have a strong familiarity with collaboritve workflows.
+						</li>
+						<li>
+							{" "}
+							<span className='font-bold text-base md:text-lg text-[#dfbe76]'>
+								Hosting Services:{" "}
+							</span>{" "}
+							Web deployment using Vercel, Hostinger and Heroku.
 						</li>
 					</ul>
 				</SkillsMotion>
