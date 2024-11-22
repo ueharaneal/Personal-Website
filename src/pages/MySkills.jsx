@@ -149,7 +149,7 @@ const MySkills = () => {
 								Relational Databases:{" "}
 							</span>{" "}
 							Designed schemas, crafted complex SQL queries, and
-							optimized databases for scalability using MySQL
+							optimized databases for scalability using PostgreSQL
 						</li>
 						<li>
 							{" "}

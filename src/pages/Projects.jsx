@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import MainProjectsDisplay from "../components/MainProjectsDisplay"
 import { motion } from "framer-motion"
+import PassionProjectDisplay from "../components/PassionProjectDisplay"
 
 function Projects() {
 	const ref = useRef(null)
@@ -21,6 +22,7 @@ function Projects() {
 					{" "}
 					MY <span className='text-[#7B68EE] ml-2'>PROJECTS</span>
 				</motion.h1>
+				<PassionProjectDisplay />
 				<MainProjectsDisplay className='' />
 			</div>
 		</section>
