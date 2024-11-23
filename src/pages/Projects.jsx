@@ -10,9 +10,9 @@ function Projects() {
 		<section
 			ref={ref}
 			id='projects'
-			className='mx-auto max-w-7xl flex justify-center h-full relative'
+			className='flex mx-auto lg:max-w-4xl xl:max-w-7xl w-full justify-center h-full relative'
 		>
-			<div className='flex flex-col justify-center mt-28 2xl:mt-0 md:mt-6'>
+			<div className='flex flex-col justify-center mt-28 2xl:mt-0 md:mt-6 mx-3'>
 				<motion.h1
 					initial={{ x: -200, scale: 0.5 }}
 					animate={{ x: 0, scale: 1 }}

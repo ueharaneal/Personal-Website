@@ -8,14 +8,14 @@ function PassionProjectDisplay() {
 	return (
 		<div className=' mx-auto flex flex-col text-[#EBE4D1] gap-y-5  text-center '>
 			<div className=' bg-gradient-to-r from-black-900/50 to-slate-800/10 backdrop-blur-sm my-4'>
-				<h1 className='text-center text-xl lg:text-5xl text-[#7B68EE]'>
+				<h1 className='text-center text-3xl lg:text-5xl text-[#7B68EE]'>
 					{" "}
 					Connekter{" "}
 				</h1>
-				<p>A Passion Project</p>
+				<p className='lg:text-base text-sm'>A Passion Project</p>
 			</div>
-			<div className='flex flex-row gap-x-3 w-full'>
-				<div className='w-1/2 bg-white mx-auto text-black border rounded-xl'>
+			<div className='flex flex-col gap-y-5 md:flex-row w-full'>
+				<div className='w-11/12 bg-white mx-auto  text-black border rounded-xl'>
 					<img
 						src={connekterImage}
 						alt='connekterImage'
@@ -30,7 +30,7 @@ function PassionProjectDisplay() {
 						visible: { x: 0, scale: 1 },
 					}}
 					transition={{ delay: 0.3, duration: 0.6 }}
-					className='text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7 flex flex-col gap-y-5 text-start w-1/3'
+					className='text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7 flex flex-col gap-y-5 text-start mx-3'
 				>
 					<div className='flex flex-row gap-x-2 items-end'>
 						<div className='space-y-2'>
@@ -50,7 +50,7 @@ function PassionProjectDisplay() {
 									href='/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className={`${buttonClassname}`}
+									className={`${buttonClassname} `}
 								>
 									See Code{" "}
 									<FiArrowRight className='h-7 group-hover:translate-x-4 transition-transform' />
@@ -80,7 +80,7 @@ function PassionProjectDisplay() {
 				transition={{ delay: 0.3, duration: 0.6 }}
 				className='text-white rounded-xl bg-gradient-to-r from-slate-900/50 to-slate-800/10 backdrop-blur-sm p-7 flex flex-col gap-y-5 text-start'
 			>
-				<div className='flex flex-row gap-x-2 items-end'>
+				<div className='flex flex-col lg:flex-row gap-x-2 items-start lg:items-center'>
 					<h4 className='font-bold  text-base md:text-lg text-[#fac003]'>
 						Technologies Used:
 					</h4>
