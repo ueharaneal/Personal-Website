@@ -47,7 +47,7 @@ function PassionProjectDisplay() {
 							</p>
 							<div className='flex justify-center gap-x-12'>
 								<a
-									href='/'
+									href='https://github.com/ueharaneal/connekter'
 									target='_blank'
 									rel='noopener noreferrer'
 									className={`${buttonClassname} `}
@@ -56,7 +56,7 @@ function PassionProjectDisplay() {
 									<FiArrowRight className='h-7 group-hover:translate-x-4 transition-transform' />
 								</a>
 								<a
-									href='/'
+									href='https://connekter-ten.vercel.app/'
 									target='_blank'
 									rel='noopener noreferrer'
 									className={`${buttonClassname}`}
