@@ -4,10 +4,11 @@ import { motion } from "framer-motion"
 import Resume from "../assets/SWE102424.pdf"
 import { FiArrowRight } from "react-icons/fi"
 
+export const buttonClassname =
+	"flex flex-row justify-between bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md font-medium py-2 px-6 my-8 w-[120px] md:w-[200px] md:text-lg hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-gray-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-[#6754DA] group"
+
 const Home = () => {
 	const websiteCodeLink = "https://github.com/ueharaneal/Personal-Website"
-	const buttonClassname =
-		"flex flex-row justify-between bg-gradient-to-r from-purple-300 to-[#7B68EE] text-black text-sm rounded-md font-medium mx-auto py-2 px-6 my-8 w-[120px] md:w-[200px] md:text-lg hover:-translate-y-1 hover:scale-105 transition-transform duration-200 hover:text-gray-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-[#6754DA] group"
 
 	return (
 		<section id='home' className='text-[#EBE4D1] relative z-0'>
@@ -70,7 +71,7 @@ const Home = () => {
 					<p className='text-gray-400 font-bold text-lg md:text-2xl mx-14'>
 						A Typescript/Javascript developer dedicated to problem solving
 					</p>
-					<div className='flex justify-center'>
+					<div className='flex justify-center gap-x-16'>
 						<a
 							href={Resume}
 							target='_blank'

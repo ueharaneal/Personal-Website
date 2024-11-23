@@ -4,7 +4,6 @@ import SkillsMotion from "../components/SkillsMotion"
 import Tech from "../components/Tech"
 
 const MySkills = () => {
-	const isAboveLarge = useMediaQuery("(min-width: 1060px)")
 	return (
 		<section
 			id='skills'

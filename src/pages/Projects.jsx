@@ -10,7 +10,7 @@ function Projects() {
 		<section
 			ref={ref}
 			id='projects'
-			className='mx-auto w-5/6 flex justify-center h-screen relative'
+			className='mx-auto max-w-7xl flex justify-center h-full relative'
 		>
 			<div className='flex flex-col justify-center mt-28 2xl:mt-0 md:mt-6'>
 				<motion.h1
