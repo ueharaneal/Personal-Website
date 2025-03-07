@@ -1,7 +1,7 @@
 import Typed from "react-typed"
 import { motion } from "framer-motion"
 
-import Resume from "../assets/SWE102424.pdf"
+import Resume from "../assets/SWE_Resume3425.pdf"
 import { FiArrowRight } from "react-icons/fi"
 
 export const buttonClassname =

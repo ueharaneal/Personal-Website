@@ -6,13 +6,15 @@ import { FiArrowRight } from "react-icons/fi"
 
 function PassionProjectDisplay() {
 	return (
-		<div className=' mx-auto flex flex-col text-[#EBE4D1] gap-y-5  text-center '>
-			<div className=' bg-gradient-to-r from-black-900/50 to-slate-800/10 backdrop-blur-sm my-4'>
+		<div className='mx-auto flex flex-col text-[#EBE4D1] gap-y-5  text-center rounded-2xl'>
+			<div className=' bg-gradient-to-r from-black-900 to-slate-800 backdrop-blur-md my-4 rounded-2xl'>
 				<h1 className='text-center text-3xl lg:text-5xl text-[#7B68EE]'>
 					{" "}
 					Connekter{" "}
 				</h1>
-				<p className='lg:text-base text-sm'>A Passion Project</p>
+				<p className='lg:text-base text-sm'>
+					A Passion Project (In progress..)
+				</p>
 			</div>
 			<div className='flex flex-col gap-y-5 md:flex-row w-full'>
 				<div className='w-11/12 bg-white mx-auto  text-black border rounded-xl'>
@@ -85,8 +87,8 @@ function PassionProjectDisplay() {
 						Technologies Used:
 					</h4>
 					<p>
-						NextJS(App Router), React, TRPC, Drizzle, NeonDatabase,
-						NextAuth, Stripe, Jest and ShadcnUi{" "}
+						NextJS(App Router), React, TRPC, Drizzle, Supabase, postgis,
+						Vercel Ai Sdk, NextAuth, Stripe, Jest and ShadcnUi{" "}
 					</p>
 				</div>
 
